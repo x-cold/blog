@@ -1,7 +1,7 @@
 title: js自动处理表单
 date: 2015-1-17
 tags: js
-categories: js
+categories: javascript
 ---
 我们在浏览网页时偶尔会碰到一些需要重复选择各种选项的尴尬局面，我们希望可以有一种工具可以帮助我们自动完成填表或者选择选卡项目。
 
@@ -81,7 +81,7 @@ var frame = window.frames["zhuti"].document.getElementById('divJs');
 //num填写0为清除表单
 ```
 
-<a class="btn" href="http://7u2liq.com1.z0.glb.clouddn.com/blog/demo/js%E8%87%AA%E5%8A%A8%E5%A4%84%E7%90%86%E8%A1%A8%E5%8D%95/index.html">查看demo</a>
+<a class="btn" href="http://7u2liq.com1.z0.glb.clouddn.com/blog/demo/js自动处理表单/">查看demo</a>
 
 ###下面是demo的源代码
 ```html
