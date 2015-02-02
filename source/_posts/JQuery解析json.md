@@ -1,7 +1,7 @@
 title: JQuery解析json
 date: 2015-1-26
 tags: [js,jquery]
-categories: js
+categories: javascript
 ---
 json文件是一种轻量级的数据交互格式。一般在jquery中使用getJSON()方法读取。
 

@@ -1,7 +1,7 @@
 title: Javascript ajax获取xml
 date: 2015-1-27
 tags: [js,ajax]
-categories: js
+categories: javascript
 ---
 ### ajax简介
 + AJAX = 异步 JavaScript 和 XML
