@@ -5,14 +5,14 @@
 # Site
 title: 小冷的技术博客
 subtitle: 思有所得，留则所用。
-description: 小冷的技术博客 | cmd | web | QT5 | powershell | linux
+description: 小冷的技术博客 | 前端 | 计算机维护 | powershell | linux
 author: xcold
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://x-cold.github.io
+url: http:/lxstart.net
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
