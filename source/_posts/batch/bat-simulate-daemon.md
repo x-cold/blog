@@ -3,6 +3,8 @@ date: 2015-1-23
 tags: [cmd,bat]
 categories: cmd
 ---
+
+![title](/img/title/2.jpg)
 ### 原理非常简单，既是在后台监听任务管理器列表中是否存在被守护的进程。
 
 _核心代码_

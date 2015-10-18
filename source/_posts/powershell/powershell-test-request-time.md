@@ -3,7 +3,7 @@ date: 2015-5-27
 tags: powershell
 categories: powershell
 ---
-<img src="/css/images/posts/测试服务器请求时间/index.png">
+![title](/img/title/4.jpg)
 
 #### 1、使用基本的cmdlet
 + Invoke-WebRequest进行HTTP请求测试

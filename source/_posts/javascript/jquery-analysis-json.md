@@ -3,6 +3,7 @@ date: 2015-1-26
 tags: [js,jquery]
 categories: javascript
 ---
+![title](/img/title/1.jpg)
 json文件是一种轻量级的数据交互格式。一般在jquery中使用getJSON()方法读取。
 
 ```js

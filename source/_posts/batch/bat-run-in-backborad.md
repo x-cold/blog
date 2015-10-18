@@ -3,6 +3,7 @@ date: 2015-1-28
 tags: [bat,cmd]
 categories: cmd
 ---
+![title](/img/title/3.jpg)
 _ cmd /c 和 cmd /k 以及 VBscript 隐藏控制台窗口 _
 
 ```Bash

@@ -3,6 +3,8 @@ date: 2015-1-25
 tags: css
 categories: css
 ---
+![title](/img/title/1.jpg)
+
 + [1位重要标志位] > [4位特殊性标志] > 声明先后顺序
 ```Bash
 !important > [ id > class > tag ]

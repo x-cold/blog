@@ -3,6 +3,7 @@ date: 2015-1-24
 tags: [js,html,css]
 categories: javascript
 ---
+![title](/img/title/1.jpg)
 ### Javascript 定位属性
 
 + clientHeight\clientWidth

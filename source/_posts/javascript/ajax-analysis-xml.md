@@ -3,6 +3,8 @@ date: 2015-1-27
 tags: [js,ajax]
 categories: javascript
 ---
+![title](/img/title/1.jpg)
+
 ### ajax简介
 + AJAX = 异步 JavaScript 和 XML
 + AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术

@@ -3,6 +3,7 @@ date: 2015-1-29
 tags: powershell
 categories: powershell
 ---
+![title](/img/title/4.jpg)
 ### powershell脚本入门须知
 + 脚本文件后缀名为 ".ps1" 的文本文件，包含了一系列的powershell命令，每条命令显示为独立的一行；
 

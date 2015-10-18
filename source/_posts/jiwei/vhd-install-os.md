@@ -3,6 +3,7 @@ date: 2015-1-22
 tags: 计算机维护
 categories: 计算机维护队
 ---
+![title](/img/title/6.jpg)
 ### VHD简介
 	VHD，全称 Virtual Hard Disk ，正如其中文翻译，即是虚拟硬盘[powered by微软]。
 	简而言之，就是用一个硬盘上的文件来模拟和管理一个全新的物理磁盘，是虚拟化技术的一大利器。

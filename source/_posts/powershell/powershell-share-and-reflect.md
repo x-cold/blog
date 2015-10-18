@@ -4,7 +4,7 @@ tags: [powershell,share$]
 categories: powershell
 ---
 共享文件夹的应用非常广泛，客户端对服务器端进行文件管理，局域网文件直传等等。
-
+![title](/img/title/4.jpg)
 ##用powershell脚本/cmd管理共享文件夹:
 _适用于 PowerShell 所有版本_
 
