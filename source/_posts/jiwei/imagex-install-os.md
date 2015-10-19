@@ -1,7 +1,7 @@
 title: imagex.exe花式装系统
 date: 2015-1-20
 tags: 计算机维护
-categories: 计算机维护队
+categories: 计算机维护
 ---
 ![title](/img/title/6.jpg)
 ### imagex.exe简介

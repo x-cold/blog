@@ -1,7 +1,7 @@
 title: js-class
 date: 2015-09-19 19:15:18
-tags: Javascript
-categories: [Javascript, js进阶]
+tags: js
+categories: [javascript, js进阶]
 ---
 ![title](/img/title/1.jpg)
 ### 众所周知，Javascript是一门非常灵活语言，在js的高级特性中，不乏有类似其他高于语言（如C++、Java）中涉及到的类。

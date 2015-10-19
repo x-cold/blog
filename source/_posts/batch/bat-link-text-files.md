@@ -1,7 +1,7 @@
 title: 批处理文本连接
 date: 2015-1-21
-tags: cmd
-categories: cmd
+tags: [cmd,bat]
+categories: bat
 ---
 ![title](/img/title/2.jpg)
 ### 使用批处理进行多个文本内容的筛选及合并

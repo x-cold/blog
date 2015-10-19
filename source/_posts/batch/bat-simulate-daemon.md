@@ -1,7 +1,7 @@
 title: 批处理模拟守护进程
 date: 2015-1-23
 tags: [cmd,bat]
-categories: cmd
+categories: bat
 ---
 
 ![title](/img/title/2.jpg)

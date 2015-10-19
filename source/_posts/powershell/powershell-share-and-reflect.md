@@ -1,6 +1,6 @@
 title: powershell学习之道-文件夹共享及磁盘映射
 date: 2015-1-19
-tags: [powershell,share$]
+tags: [powershell, 文件共享]
 categories: powershell
 ---
 共享文件夹的应用非常广泛，客户端对服务器端进行文件管理，局域网文件直传等等。
