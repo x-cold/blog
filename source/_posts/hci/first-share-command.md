@@ -1,7 +1,7 @@
 title: HCI第一次分享例会[命令行]
 date: 2015-10-25
 tags: [cmd, linux, HCI]
-categories: [HCI分享]
+categories: [HCI, HCI分享]
 ---
 
 ![HCI分享](/img/title/hci.png)
