@@ -1,4 +1,5 @@
 title: HCI之前端小任务 [HCI趣玩-2016年预热]
+date: 2015-12-31
 tags: [javascript, HCI]
 categories: [HCI, HCI趣玩]
 ---

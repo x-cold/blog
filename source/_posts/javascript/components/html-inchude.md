@@ -1,4 +1,5 @@
 title: 如何在HTML内包含HTML模板文件
+date: 2016-2-28
 tags: [js,html,css]
 categories: [javascript, component]
 ---
