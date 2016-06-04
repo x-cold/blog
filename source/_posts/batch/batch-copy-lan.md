@@ -4,21 +4,24 @@ tags: [cmd,bat,网络共享]
 categories: bat
 ---
 
-题记：计算机维护队将于次日在机房进行队员第一次培训会，培训会上的队员实操过程则需要使用到win7和PE镜像，工作人员（委员）不得不提前拷贝好镜像到每一台机子。于是便有了机房内通过网络批量传输文件的想法，实现之后可以大大减轻工作量，传输速度上瓶颈为100Mbps（机房网络配置），与普通USB3.0的U盘传输速率相比确实低了一大截，在传输速率上似乎不占优势，因此我们将多台主机作为源点传输数据，并行传输数据，大大提升了时间效率。
-
 ![title](/img/title/6.jpg)
 
+题记：计算机维护队将于次日在机房进行队员第一次培训会，培训会上的队员实操过程则需要使用到win7和PE镜像，工作人员（委员）不得不提前拷贝好镜像到每一台机子。于是便有了机房内通过网络批量传输文件的想法，实现之后可以大大减轻工作量，传输速度上瓶颈为100Mbps（机房网络配置），与普通USB3.0的U盘传输速率相比确实低了一大截，在传输速率上似乎不占优势，因此我们将多台主机作为源点传输数据，并行传输数据，大大提升了时间效率。
+
+<!-- more -->
+
 ### 机遇阶段
+
 很凑巧，在同类型的机房中上实验课的时候一不小心执行了以下powershell指令：
 
-```Bash
+```
 Get-WmiObject -Class Win32_Share -Computername [computername]
 # [computername] 代表主机名
 ```
 
 意外的收获，默认共享居然没有被关闭，切安全策略~[偷笑]!
 
-```Bash
+```
 Name     Path                          Description
 ----     ----                          -----------
 ADMIN$   C:\Windows                    远程管理
@@ -29,7 +32,7 @@ IPC$                                   远程 IPC
 
 然而不出所料，我尝试通过net use空连接到旁边的机子时，被无情的拒之门外。要知道机房的电脑都是自带默认密码的。
 
-```Bash
+```
 net use z: \\[computername]\D$
 
 为 '[computername]' 输入用户名:
@@ -61,7 +64,7 @@ mimikatz # sekurlsa::logonpasswords
 
 获取密码后部分结果如下：
 
-```Bash
+```
 # *是编者自己打上的马赛克，命令执行后输出的全为明文，下同
 Authentication Id : 0 ; 298372 (00000000:00048d84)
 Session           : Interactive from 1
@@ -95,16 +98,18 @@ SID               : S-1-5-21-*******-********-*********-1004
          * Username : (null)
          * Domain   : MicrosoftOffice16_Data:SSPI:lxstart@outlook.com
          * Password : ******
-    
+
 ```
+
 ### 程序设计
+
 既然获取到了一台机子的明文密码（账户名默认为Administrator），由于机房采用统一镜像进行安装，因此默认账户信息完全一致，那么，就可以跳到批量传输的阶段了。那么我们来做一个详尽的规划：[篇幅有限，下面只提供关键代码]
 
 #### 获取局域网内的主机名列表
 
 原理：通过net view获取局域网主机列表后进行字符串过滤筛选，得到最终的主机名列表并写入hosts.ini文件。
 
-```Bash
+```
 (for /f "eol=。 skip=3 tokens=1 delims=, " %%i in ('net view') do (
 	for /f "tokens=1 delims=\ " %%a in ('echo %%i ^| findstr ^\') do (
 		echo %%a
@@ -114,22 +119,23 @@ SID               : S-1-5-21-*******-********-*********-1004
 
 #### 建立net use连接
 
-```Bash
+```
 # 将网络路径\\[hostname]\d$映射到z:\
 net use z: \\[hostname]\d$ "******" /user:"administrator" /persistent:yes
 ```
 
 在这之前需要先释放z:原本可能存在net use连接：
 
-```Bash
+```
 net use z: /delete
 ```
+
 我们就可以直接通过访问z:来访问到目标机器的D盘根目录并进行文件操作了。
 
 #### 复制文件
 推荐使用xcopy命令，参数较简单易懂。
 
-```Bash
+```
 # 假设D:\已有win7.iso和PE.iso
 xcopy D:\win7.iso Z:\
 xcopy D:\PE.iso Z:\
@@ -137,7 +143,7 @@ xcopy D:\PE.iso Z:\
 #### 批量复制
 由于我们已经获取到主机名列表，则我们可以串行批量复制文件。
 
-```Bash
+```
 for /f  %%a in (hosts.ini) do (
 	echo 正在处理%%a
 	call :copyer %%a
@@ -167,7 +173,7 @@ xcopy D:\PE.iso Z:\
 
 关键要解决的问题是需要给下一台机器发送指令，分配给每台主机最优的复制队列：通过ipc$获取远程at和time权限
 
-```Bash
+```
 # 建立ipc$连接
 net use \\[hostname]\ipc$ "password" /user:"username"
 
@@ -178,5 +184,3 @@ net time \\[hostname]
 at \\[hostname] 19:01 transformListFile.bat
 
 ```
-
-具体求法下回分解。夜深人悄悄。

@@ -4,21 +4,24 @@ tags: [cmd,bat]
 categories: bat
 ---
 
-![title](/img/title/2.jpg)
-### 原理非常简单，既是在后台监听任务管理器列表中是否存在被守护的进程。
+### 原理：后台监听任务管理器列表中是否存在被守护的进程
 
 _核心代码_
 
-```Bash
+```
 ::守护chrome.exe进程
 tasklist | findstr "chrome.exe" || start "%ProgramFiles%\Google\Chrome\Applicationchrome\chrome.exe"
 ```
+
+<!-- more -->
+
+### 主要知识点
 
 + 主要运用到管道符号"|"，配合findstr寻找并判断系统是否运行着"chrome.exe"，"||"连接符表示"finstr"未找到合适的进程，将执行后面的启动"chrome.exe"语句。
 
 <!--more-->
 
-### 下面是一则源码，用于批量打开网页，并且在浏览器关闭后循环这个过程。
+### 下面是一则源码，用于批量打开网页，并且在浏览器关闭后循环这个过程。【可拓展用途】
 
 ```Bash
 @echo off
