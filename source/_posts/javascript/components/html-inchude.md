@@ -2,15 +2,16 @@ title: 如何在HTML内包含HTML模板文件
 tags: [js,html,css]
 categories: [javascript, component]
 ---
-![title](/img/title/1.jpg)
 
 题记：最近项目开发使用了全新的架构（RequireJS+AngularJS+IonicUI），类似的前端MVVM框架已经深入人心，因此也试着在项目之余写一点小代码实现部分功能。下面我们将用原生的Javascript实现一个在HTML内引入HTML文件的简单小组件。
 
 言归正传，我们要实现的功能就是在一个HTML内引用其他的HTML模板文件。例如以下场景：应用的多个页面需要复用一个header，而我们希望只对其进行一次编辑和修改就可以应用于所有页面，因为我们可以将header的内容作为一个模板，其他页面只需要调用这个模板。
 
+<!-- more -->
+
 _在后端的模板引擎内我们可以直接使用`include`类似的语句包含其他的模板，在一些SPA(Single Page APP)也是利用了类似于`ng-include`的写法复用HTML模板_
 
-设计思路：
+### 设计思路：
 
 + HTML标签：添加`include-html`属性，用于置入引用的HTML模板的URL
 
@@ -85,7 +86,7 @@ var loadHTML = function(method, url, async, callback) {
 
 这里还需要进行算法优化，借着午后小憩的时间暂且先完成此DEMO，后继完善。
 
-#### 完整DEMO
+### 完整DEMO
 
 1. index.html
 
@@ -124,7 +125,7 @@ var check = function(data) {
 	if (typeof(data) === undefined || data === null || data === '' || data === undefined) return false;
 	return true;
 }
-		
+
 /**
  *	XMLHttpRequest Get Html Content
  *	@param	{String} method - 方法

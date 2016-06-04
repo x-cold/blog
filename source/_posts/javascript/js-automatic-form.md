@@ -1,13 +1,15 @@
-title: js自动处理表单
+title: js自动化处理表单
 date: 2015-1-17
 tags: js
 categories: javascript
 ---
-![title](/img/title/1.jpg)
+
 我们在浏览网页时偶尔会碰到一些需要重复选择各种选项的尴尬局面，我们希望可以有一种工具可以帮助我们自动完成填表或者选择选卡项目。
 
 ### 实现原理【需要对html有一知半解】
 调用浏览器的控制台运行js脚本，从而达到自动填写表单和选择勾选项，以及自动提交等功能。
+
+<!-- more -->
 
 ### 实现方法（例子）
 
@@ -76,7 +78,7 @@ var frame = window.frames["zhuti"].document.getElementById('divJs');
 	   }
 	   username.value = "";
 	   password.value = "";
-	} 
+	}
 })(num);
 //num填写1为自动处理
 //num填写0为清除表单
@@ -155,7 +157,7 @@ var frame = window.frames["zhuti"].document.getElementById('divJs');
             <div class="form-group">
                <label for="firstname" class="col-sm-1 control-label">用户名:</label>
                <div class="col-sm-11">
-                  <input type="text" class="form-control" id="username" 
+                  <input type="text" class="form-control" id="username"
                      placeholder="请输入用户名">
                </div>
             </div>&nbsp;
@@ -207,7 +209,7 @@ var frame = window.frames["zhuti"].document.getElementById('divJs');
                }
                username.value = "";
                password.value = "";
-            } 
+            }
          };
 
       </script>

@@ -1,0 +1,59 @@
+# Header
+menu:
+  我的主页: /
+  所有文章: /archives
+  随心所欲: /tags/随笔
+
+# SubNav
+subnav:
+  github: "https://github.com/x-cold"
+  # weibo: "#"
+  # rss: "#"
+  # zhihu: "#"
+  #douban: "#"
+  mail: "mailto:lxstart@outlook.com"
+  #facebook: "#"
+  #google: "#"
+  #twitter: "#"
+  #linkedin: "#"
+
+rss: /atom.xml
+
+# Content
+excerpt_link: more
+fancybox: true
+mathjax: true
+
+# 是否开启动画效果
+animate: true
+
+# 是否在新窗口打开链接
+open_in_new: false
+
+# Miscellaneous
+google_analytics: ''
+favicon: /favicon.png
+
+#你的头像url
+avatar: /img/avatar.jpg
+#是否开启分享
+share_jia: true
+# share_addthis: true
+#是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key
+#若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论
+duoshuo: x-cold
+#是否开启云标签
+tagcloud: true
+
+#是否开启友情链接
+#不开启——
+#friends: false
+#开启——
+friends:
+  计算机维护队: http://blog.scaujiwei.com/
+
+#是否开启“关于我”。
+#不开启——
+#aboutme: false
+#开启——
+aboutme:

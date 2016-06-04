@@ -3,7 +3,7 @@ date: 2015-1-24
 tags: [js,html,css]
 categories: javascript
 ---
-![title](/img/title/1.jpg)
+
 ### Javascript 定位属性
 
 + clientHeight\clientWidth
@@ -14,6 +14,8 @@ categories: javascript
 
 + scrollHeight\scrollWidth
 	元素内容的实际高度（内容多了可能会改变对象的实际宽度）
+
+<!-- more -->
 
 + clientTop\clientLeft
 	子元素margin之后父元素padding之前的高度\宽度

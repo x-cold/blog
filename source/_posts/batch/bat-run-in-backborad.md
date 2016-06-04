@@ -3,15 +3,19 @@ date: 2015-1-28
 tags: [bat,cmd]
 categories: bat
 ---
-![title](/img/title/3.jpg)
-_ cmd /c 和 cmd /k 以及 VBscript 隐藏控制台窗口 _
+### 通过cmd的启动参数进行窗口隐藏
 
-```Bash
+```
 cmd /c test #后台调用test并关闭当前进程
 cmd /k test #后台调用test但不关闭当前进程
 ```
 
-VBscript代码： 
+<!-- more -->
+
+### 通过vbs直接启动
+
+cmd /c 和 cmd /k隐藏控制台窗口时，依然会出现一个一闪而过的黑框，因此我们需要通过VBscript进行辅助启动。
+
 ```vbs
 Set ws = CreateObject("Wscript.Shell")
 ws.run "cmd /c lol.bat",vbhide

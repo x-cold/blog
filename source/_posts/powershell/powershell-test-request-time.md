@@ -3,7 +3,6 @@ date: 2015-5-27
 tags: powershell
 categories: powershell
 ---
-![title](/img/title/4.jpg)
 
 #### 1、使用基本的cmdlet
 + Invoke-WebRequest进行HTTP请求测试
@@ -13,6 +12,8 @@ categories: powershell
 PS > Invoke-WebRequest -Uri "http://www.baidu.com"
 
 ```
+
+<!-- more -->
 
 + Measure-Command对上面的命令进行"计时"
 
@@ -43,7 +44,7 @@ Write-Host "It took $milliseconds ms!"
 
 PowerShell获取网页信息个人建议的三种解决方案：
 
-+ Web-Client
++ WebClient
 
 + Invoke-WebRequest
 

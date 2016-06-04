@@ -3,16 +3,16 @@ date: 2015-1-27
 tags: [js,ajax]
 categories: javascript
 ---
-![title](/img/title/1.jpg)
 
 ### ajax简介
+
 + AJAX = 异步 JavaScript 和 XML
 + AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术
 + AJAX 是一种用于创建快速动态网页的技术
 
-### ajax操作xml可以快速建立轻量级的动态网站,下面是实例：
+<!-- more -->
 
-<!--more-->
+### ajax操作xml可以快速建立轻量级的动态网站,下面是实例：
 
 <a class="btn" href="http://7u2liq.com1.z0.glb.clouddn.com/blog/demo/ajax/html/">查看demo</a>
 
@@ -23,10 +23,10 @@ function loadXMLDoc(url) {
 	var xmlhttp;
 	var content,tr,temp,data;
 	// 创建请求对象
-	if (window.XMLHttpRequest) { 
+	if (window.XMLHttpRequest) {
 		// code for IE7+, Firefox, Chrome, Opera, Safari
 		xmlhttp = new XMLHttpRequest();
-	} else { 
+	} else {
 		// code for IE6, IE5
 		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 	}

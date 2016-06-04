@@ -4,13 +4,13 @@ tags: [cmd, linux, HCI]
 categories: [HCI, HCI分享]
 ---
 
-![HCI分享](/img/title/hci.png)
-
 欢迎来访HCI第一次例会分享，今天小编（HCI-鹏飞）需要分享的是linux和windows命令行的基本命令以及技巧。
 
 ### 关于linux知多少
 概要：开源、多用户多任务、支持多线程多CPU的操作系统（基于POSIX和UNIX），以网络为核心而设计，可以运行UNIX工具、应用程序和网络协议。Linux内核版本已经升级到4.3。(内核源代码Git仓库：https://git.kernel.org/)。
 特性：强大的控制台和Linux终端环境以及桌面环境如GNOME, KDE, XFCE和 LXDE，稳定性高安全性较高。
+
+<!-- more -->
 
 应用场景：
 ![应用场景](/img/linux/application.png)

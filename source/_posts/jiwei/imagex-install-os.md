@@ -3,11 +3,14 @@ date: 2015-1-20
 tags: 计算机维护
 categories: 计算机维护
 ---
-![title](/img/title/6.jpg)
+
 ### imagex.exe简介
 imagex.exe是一款用来捕获、修改和应用基于文件的磁盘映像以进行快速部署。ImageX可以使用 Windows 映像 (.wim) 文件复制到网络，或者还可以使用其他利用 .wim 映像的技术，如 Windows 安装程序、Windows 部署服务 (Windows DS) 以及系统管理服务器 (SMS) 操作系统功能部署包。
 
+<!-- more -->
+
 ### 帮助文档
+
 ```Bash
 \> imagex /help		#查看帮助文档
 ImageX Tool for Windows
@@ -43,7 +46,7 @@ Examples:
 All operations accept the following flags:
   /SCROLL
   /LOGFILE logfile.log
-\> 
+\>
 ```
 <!--more-->
 
@@ -122,7 +125,7 @@ Available Image Choices:
   </IMAGE>
 </WIM>
 
-\> 
+\>
 ```
 + Image Count 即是该镜像包含的的系统各版本的计数，如旗舰版、专业版等。我们需要在后面的XML里面找到自己需要安装的系统版本对应的Count记录下来。
 

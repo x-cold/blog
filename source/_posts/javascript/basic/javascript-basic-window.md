@@ -1,12 +1,10 @@
 title: Javascript之window对象
 date: 2016-2-11
-tags: [js, window]
-categories: [javascript, 基础扫盲]
+tags: [javascript, BOM]
+categories: [javascript]
 ---
-![title](/img/title/1.jpg)
 
 说到window对象我们不得不提及BOM，BOM是browser object model的缩写，正如其名为浏览器对象模型。BOM提供了独立于内容而与浏览器窗口进行交互的对象，BOM由一系列相关的对象组成，其中最主要对象为window，下面我们将分类讲解window对象。
-
 
 ### 概述
 
@@ -246,7 +244,7 @@ string !== null ? console.log('学号是' + string) : console.log('您点击了�
 6、时间等待和间隔函数
 
 * setTimeout()/clearTimeout()
-按照指定的周期（以毫秒计）来调用函数或计算表达式 / 取消前者设定的计时器 
+按照指定的周期（以毫秒计）来调用函数或计算表达式 / 取消前者设定的计时器
 
 * setInterval/clearInterval()
 在指定的毫秒数后调用函数或计算表达式 / 取消前者设定的计时器

@@ -1,10 +1,13 @@
-title: powershell学习之道-ps脚本入门须知
+title: powershell学习之道-入门须知的八个技巧
 date: 2015-1-29
 tags: powershell
 categories: powershell
 ---
+
 ![title](/img/title/4.jpg)
-### powershell脚本入门须知
+
+### powershell脚本入门须知的八个技巧
+
 + 脚本文件后缀名为 ".ps1" 的文本文件，包含了一系列的powershell命令，每条命令显示为独立的一行；
 
 + 执行策略：about_Execution_Policies，通过下面这条命令查询所有支持的执行策略：
@@ -13,7 +16,7 @@ categories: powershell
 [System.Enum]::GetNames([Microsoft.PowerShell.ExecutionPolicy])
 ```
 
-<!--more-->
+<!-- more -->
 
 + 运行脚本：使用绝对路径和相对路径均可运行，与shell命令执行如出一辙；
 

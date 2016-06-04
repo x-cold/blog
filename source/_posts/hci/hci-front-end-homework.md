@@ -3,8 +3,6 @@ tags: [javascript, HCI]
 categories: [HCI, HCI趣玩]
 ---
 
-![HCI趣玩](/img/title/hci.png)
-
 ## 前端&UI任务
 
 + 形式：2-3人一组，自由组合
@@ -12,6 +10,8 @@ categories: [HCI, HCI趣玩]
 + 截止期限：2016年2月28日
 
 + 提交方式：在github上管理项目，在HCIFE的[hcife-task](https://github.com/hcife/hcife-task)处将项目地址提交到issue
+
+<!-- more -->
 
 ![](https://github.com/hcife/hcife-task/raw/master/hcife-task.png)
 ![](https://github.com/hcife/hcife-task/raw/master/hcife-task1.png)
@@ -44,4 +44,3 @@ categories: [HCI, HCI趣玩]
 + 可参考[WebGLBook](https://github.com/tparisi/WebGLBook)
 
 + 这世界有点假。。。
-
