@@ -1,9 +1,11 @@
 title: 批处理实现机房文件批量传输
-date: 2015-10-17
-tags: [cmd,bat,网络共享]
-categories: bat
+tags:
+  - cmd
+  - bat
+categories:
+  - bat
+date: 2015-10-17 00:00:00
 ---
-
 ![title](/img/title/6.jpg)
 
 题记：计算机维护队将于次日在机房进行队员第一次培训会，培训会上的队员实操过程则需要使用到win7和PE镜像，工作人员（委员）不得不提前拷贝好镜像到每一台机子。于是便有了机房内通过网络批量传输文件的想法，实现之后可以大大减轻工作量，传输速度上瓶颈为100Mbps（机房网络配置），与普通USB3.0的U盘传输速率相比确实低了一大截，在传输速率上似乎不占优势，因此我们将多台主机作为源点传输数据，并行传输数据，大大提升了时间效率。
@@ -40,7 +42,7 @@ net use z: \\[computername]\D$
 操作已被用户取消。
 ```
 
-好吧，确实是个棘手的问题，因为不可能提前手动更改用户密码，因为机房的电脑自带还原程序（且不可恶意破坏），因此不得不废弃这个方案。于是编者剑走偏锋，掏出了一代神器[mimikatz_trunk](http://blog.gentilkiwi.com/presentations)，利用这个神器可以轻易获取windows系统账户的明文密码。
+好吧，确实是个棘手的问题，因为不可能提前手动更改用户密码，因为机房的电脑自带还原程序（且不可恶意破坏），因此不得不废弃这个方案。于是编者剑走偏锋，掏出了一代神器[mimikatz_trunk](http://blog.gentilkiwi.com/presentations)，利用这个神器(原理是通过彩虹表破解NTLM加密口令)可以轻易获取windows系统账户的明文密码。
 
 #### 下载链接
 * [Binaires](https://github.com/gentilkiwi/mimikatz/releases/latest)
