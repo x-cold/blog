@@ -68,4 +68,5 @@ theme: yilia
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/x-cold/x-cold.github.io.git
+  repo: git@github.com:x-cold/blog.git
+  branch: gh-pages
