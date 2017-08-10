@@ -70,3 +70,6 @@ deploy:
   type: git
   repo: git@github.com:x-cold/blog.git
   branch: gh-pages
+  name: x-cold
+  email: lxstart@outlook.com
+
