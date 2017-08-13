@@ -5,6 +5,7 @@ tags:
 ---
 趁着周末偷来一点闲，总结近期的工作和学习，想着该花点心思把N3-admin这套基于N3-components的单页应用模板简单的给介绍一下。
 
+> 项目路径: https://github.com/N3-components/N3-admin
 > ps: 本项目不同于vue-admin等模板项目介绍大量的组件，基础组件的用法请参考：https://n3-components.github.io/N3-components/
 
 1、概述
