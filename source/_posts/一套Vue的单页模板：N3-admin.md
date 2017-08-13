@@ -8,6 +8,8 @@ tags:
 > 项目路径: https://github.com/N3-components/N3-admin
 > ps: 本项目不同于vue-admin等模板项目介绍大量的组件，基础组件的用法请参考：https://n3-components.github.io/N3-components/
 
+<!-- more -->
+
 1、概述
 ---
 
