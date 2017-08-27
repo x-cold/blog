@@ -73,3 +73,11 @@ deploy:
   name: x-cold
   email: lxstart@outlook.com
 
+# 发布平台
+links:
+  segementfault: https://segmentfault.com/
+  v2ex: https://www.v2ex.com/
+  yunqi: https://yq.aliyun.com/
+  cnode: http://cnodejs.org/
+  cvue: https://www.vue-js.com/
+  
