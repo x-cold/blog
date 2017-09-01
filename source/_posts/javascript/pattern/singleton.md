@@ -38,7 +38,6 @@ var createLoading = function(){
 
 Excuse me？这就是传说中的单例模式吗？
 
-> 
 #### 典型应用场景
 
 + 惰性单例：在合适的时候才创建对象，如缓存对象等。
