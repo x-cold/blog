@@ -13,7 +13,6 @@ date: 2017-08-10 23:28:00
 Shape Detection API 的发布已经有一些时日，其主要的提供的能力是给予前端直接可用的特征检测的接口（包括条形码、人脸、文本检测）。本文将简单的对其进行介绍，对前端进行人脸检测进行普适性的讲解。（本文不讲算法～望轻拍）
 
 # 1 背景与场景
----
 
 人脸检测（Face Detection）算是老生常谈的课题了，在诸多行业应用广泛，例如金融、安防、电子商务、智能手机、娱乐图片等行业。其中涉及的技术也在不断的演变，下面简要介绍几种思路：
 
@@ -21,12 +20,9 @@ a. 基于特征的人脸检测
 
 例如opencv中内置了基于Viola-Jones目标检测框架的Harr分类器，只需要载入一个配置文件（haarcascade_frontalface_alt.xml）就能直接调用detectObject去完成检测过程，同时也支持其他特征的检测（如鼻子、嘴巴等）。
 
-<!-- more -->
-
 b. 基于学习的人脸检测，其实也是需要通过算子提取的图像中的局部特征，通过对其进行分类、统计、回归等方式得到的具备更精确和快响应的分类器。
 
 # 2 套路集锦
----
 
 ## 2.1 后端处理
 
@@ -43,7 +39,6 @@ b. 基于学习的人脸检测，其实也是需要通过算子提取的图像�
 尽管不仅提供了客户端的SDK以及前后端的API，但是，怎么说也要讲讲我纯前端的方案吧。
 
 # 3 时代带来了什么
----
 
 好吧，人脸识别在前端依然是在刀耕火种的远古时代，然而，我们的基础建设已经起步，希望后续的一些相关介绍能为各位看官带来一定的启发。
 
@@ -268,7 +263,6 @@ socket.on('frame', function (data) {
 ```
 
 # 4 总结
----
 
 ## 4.1 未来的发展
 
@@ -295,12 +289,16 @@ socket.on('frame', function (data) {
 
 ## 4.3 想说又说不完的
 
-> 源代码暂时没有整理好，工作饱和中，后面会分享出来：https://github.com/x-cold
-> 关于人脸检测在不同场景的适应性，以及检测消耗的时间暂时没有数据支撑，后面考虑引入PASCAL VOC、AT&T提供的样本进行小规模的测试。
-> 团队招人中，前端和设计师校招社招都要：ais-ued-jobs@list.alibaba-inc.com
+a. Demo：
+> https://github.com/x-cold/face-detection-browser
+
+> https://github.com/x-cold/face-detection-nodejs
+
+b. 关于人脸检测在不同场景的适应性，以及检测消耗的时间暂时没有数据支撑，后面考虑引入PASCAL VOC、AT&T提供的样本进行小规模的测试。
+
+c.  招资深前端安卓IOS视觉交互：ais-ued-jobs@list.alibaba-inc.com
 
 # 5 参考
----
 
 1. 人脸识别技术大总结(1)：Face Detection & Alignment: http://blog.jobbole.com/85783/
 2. 阿里巴巴直播防控中的实人认证技术: https://xianzhi.aliyun.com/forum/mobile/read/635.html
