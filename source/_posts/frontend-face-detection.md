@@ -16,6 +16,8 @@ Shape Detection API 的发布已经有一些时日，其主要的提供的能力
 
 人脸检测（Face Detection）算是老生常谈的课题了，在诸多行业应用广泛，例如金融、安防、电子商务、智能手机、娱乐图片等行业。其中涉及的技术也在不断的演变，下面简要介绍几种思路：
 
+<!-- more -->
+
 a. 基于特征的人脸检测
 
 例如opencv中内置了基于Viola-Jones目标检测框架的Harr分类器，只需要载入一个配置文件（haarcascade_frontalface_alt.xml）就能直接调用detectObject去完成检测过程，同时也支持其他特征的检测（如鼻子、嘴巴等）。
