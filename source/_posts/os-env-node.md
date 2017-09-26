@@ -2,6 +2,11 @@ title: 这事要从node node.js说起
 author: 小冷
 date: 2017-08-19 22:09:24
 tags:
+  - javascript
+  - node.js
+  - windows
+categories:
+  - node.js
 ---
 > 导读：兴许所有程序员都有命名困难症，在考虑变量、常量、方法、类、文件等命名时，总会千方百计尝试一些语义化的方式去实现。
 

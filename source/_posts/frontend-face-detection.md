@@ -2,7 +2,6 @@ title: 咦？浏览器都能做人脸检测了？
 author: 小冷
 tags:
   - javascript
-  - ''
   - 图像处理
   - html5
   - 人脸检测
