@@ -58,6 +58,14 @@
 <%- partial('post/share_addthis') %>
 <% } %>
 
+<% if (!index && theme.gitment && post.comments){ %>
+<%- partial('post/gitment', {
+    key: post.slug,
+    title: post.title,
+    url: config.url+url_for(post.path)
+  }) %>
+<% } %>
+
 <% if (!index && theme.duoshuo && post.comments){ %>
 <%- partial('post/duoshuo', {
     key: post.slug,
