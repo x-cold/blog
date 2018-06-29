@@ -4,7 +4,7 @@ tags: powershell
 categories: powershell
 ---
 
-#### 1、使用基本的cmdlet
+### 1、使用基本的cmdlet
 + Invoke-WebRequest进行HTTP请求测试
 
 ```Bash
@@ -23,7 +23,7 @@ PS > Measure-Command -Expression {Invoke-WebRequest -Uri "http://www.baidu.com"}
 
 <!--more-->
 
-#### 2、源代码：
+### 2、源代码：
 
 ```Bash
 $url = "http://www.baidu.com"
@@ -40,7 +40,7 @@ $milliseconds = [Math]::Round($milliseconds, 1)
 Write-Host "It took $milliseconds ms!"
 ```
 
-#### 3、小结
+### 3、小结
 
 PowerShell获取网页信息个人建议的三种解决方案：
 
