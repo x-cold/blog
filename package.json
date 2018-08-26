@@ -9,7 +9,9 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "publish": "npm run clean && npm run deploy",
-    "dev": "hexo s"
+    "dev": "hexo s",
+    "sync": "DEBUG=yuque-hexo.* yuque-hexo sync",
+    "clean:yuque": "DEBUG=yuque-hexo.* yuque-hexo clean"
   },
   "dependencies": {
     "hexo": "^3.7.1",
@@ -21,6 +23,12 @@
     "hexo-renderer-ejs": "^0.1.0",
     "hexo-renderer-marked": "^0.2.4",
     "hexo-renderer-stylus": "^0.2.0",
-    "hexo-server": "^0.1.2"
+    "hexo-server": "^0.1.2",
+    "yuque-hexo": "^1.0.2"
+  },
+  "yuqueConfig": {
+    "baseUrl": "https://www.yuque.com/api/v2",
+    "login": "yinzhi",
+    "repo": "blog"
   }
 }
