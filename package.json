@@ -12,7 +12,7 @@
     "dev": "hexo s -d"
   },
   "dependencies": {
-    "hexo": "^3.3.8",
+    "hexo": "^3.7.1",
     "hexo-admin": "^2.2.1",
     "hexo-deployer-git": "0.0.4",
     "hexo-deployer-heroku": "0.0.3",

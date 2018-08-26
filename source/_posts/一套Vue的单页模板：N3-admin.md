@@ -48,7 +48,7 @@ tags:
   * [] sass / scss    <=  仅需安装预处理器和loader
 + [x] API 调用支持
   * [x] 接口配置
-  * [] mock
+  * [x] mock
 
 3、布局方式
 ---
