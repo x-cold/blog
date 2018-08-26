@@ -29,6 +29,8 @@
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.favicon %>">
   <% } %>
+  <% if (theme.gitalk){ %>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <% } %>
   <%- css('css/style') %>
-  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 </head>

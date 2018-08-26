@@ -9,14 +9,11 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "publish": "npm run clean && npm run deploy",
-    "dev": "hexo s -d"
+    "dev": "hexo s"
   },
   "dependencies": {
     "hexo": "^3.7.1",
-    "hexo-admin": "^2.2.1",
     "hexo-deployer-git": "0.0.4",
-    "hexo-deployer-heroku": "0.0.3",
-    "hexo-deployer-rsync": "^0.1.1",
     "hexo-generator-archive": "^0.1.0",
     "hexo-generator-category": "^0.1.0",
     "hexo-generator-index": "^0.1.0",
