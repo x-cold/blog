@@ -1,6 +1,6 @@
 
 title: HCI第一次分享例会[命令行]
-date: 2018-06-29T14:31:04.000Z
+date: 2018-08-27T14:05:13.000Z
 tags: []
 categories: 
 ---
@@ -10,6 +10,8 @@ categories:
 
 概要：开源、多用户多任务、支持多线程多CPU的操作系统（基于POSIX和UNIX），以网络为核心而设计，可以运行UNIX工具、应用程序和网络协议。Linux内核版本已经升级到4.3。(内核源代码Git仓库：[https://git.kernel.org/](https://git.kernel.org/))。
 特性：强大的控制台和Linux终端环境以及桌面环境如GNOME, KDE, XFCE和 LXDE，稳定性高安全性较高。
+
+<!-- more -->
 
 应用场景：
 

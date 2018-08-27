@@ -1,6 +1,6 @@
 
 title: 深入 node node.js 到 windows 环境变量
-date: 2018-06-29T14:47:28.000Z
+date: 2018-08-27T14:01:55.000Z
 tags: []
 categories: 
 ---
@@ -19,6 +19,8 @@ console.log('Hello World');
 ```
 
 于是乎，顺手保存为node.js，紧接着尝试以`node node.js`来运行该示例程序。毫无疑问，在cmd环境下，会遇到如下的报错：
+
+<!-- more -->
 
 
 

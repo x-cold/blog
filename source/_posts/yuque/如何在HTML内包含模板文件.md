@@ -1,6 +1,6 @@
 
 title: 如何在HTML内包含模板文件
-date: 2018-06-29T14:36:18.000Z
+date: 2018-08-27T14:01:41.000Z
 tags: []
 categories: 
 ---
@@ -9,6 +9,8 @@ categories:
 最近项目开发使用了全新的架构（RequireJS+AngularJS+IonicUI），类似的前端MVVM框架已经深入人心，因此也试着在项目之余写一点小代码实现部分功能。下面我们将用原生的Javascript实现一个在HTML内引入HTML文件的简单小组件。
 
 言归正传，我们要实现的功能就是在一个HTML内引用其他的HTML模板文件。例如以下场景：应用的多个页面需要复用一个header，而我们希望只对其进行一次编辑和修改就可以应用于所有页面，因为我们可以将header的内容作为一个模板，其他页面只需要调用这个模板。
+
+<!-- more -->
 
 <em>在后端的模板引擎内我们可以直接使用</em><em><code>include</code></em><em>类似的语句包含其他的模板，在一些SPA(Single Page APP)也是利用了类似于</em><em><code>ng-include</code></em><em>的写法复用HTML模板</em>
 

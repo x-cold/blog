@@ -1,6 +1,6 @@
 
 title: Javascript 设计模式之单例模式
-date: 2018-06-29T14:36:48.000Z
+date: 2018-08-27T14:01:01.000Z
 tags: []
 categories: 
 ---
@@ -10,6 +10,8 @@ categories:
 
 * 全局唯一实例
 * 单一的访问入口
+
+<!-- more -->
 
 #### <a name="b3t1da"></a>如何创建一个单例？
 

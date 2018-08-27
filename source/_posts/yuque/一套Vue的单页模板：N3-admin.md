@@ -1,6 +1,6 @@
 
 title: 一套Vue的单页模板：N3-admin
-date: 2018-07-17T13:32:40.000Z
+date: 2018-08-27T14:00:12.000Z
 tags: []
 categories: 
 ---
@@ -12,6 +12,8 @@ categories:
 ## <a name="o929fd"></a>1、概述
 
 首先N3-admin是一个基于vue / vuex / vue-router / N3 / axios 的单页应用，适用于单页应用的快速上手，并不仅限于N3-components的使用，而是提供一个__比较完善的项目构建的思路和结构__，提供给初学者学习。同时也是一套可扩展的Vue单页应用开发模板。
+
+<!-- more -->
 
 项目工程基于Vue-cli，因此大部分同学都能快速上手和理解，往下介绍一下特性和结构。
 

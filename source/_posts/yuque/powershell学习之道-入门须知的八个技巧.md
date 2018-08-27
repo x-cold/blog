@@ -1,14 +1,9 @@
 
 title: powershell学习之道-入门须知的八个技巧
-date: 2018-06-29T14:41:59.000Z
+date: 2018-08-27T14:04:15.000Z
 tags: []
 categories: 
 ---
-
-
-![image.png | left | 309x220](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283313664-4ce2070b-3184-463d-a83e-ff79823c013c.png "")
-
-
 ### <a name="k8u7pv"></a>powershell脚本入门须知的八个技巧
 
 * 脚本文件后缀名为 ".ps1" 的文本文件，包含了一系列的powershell命令，每条命令显示为独立的一行；

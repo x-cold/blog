@@ -1,6 +1,6 @@
 
 title: 你可能不知道的 Date 类
-date: 2018-08-09T08:26:50.000Z
+date: 2018-08-27T14:01:23.000Z
 tags: []
 categories: 
 ---
@@ -16,6 +16,8 @@ new Date(value);
 new Date(dateString);
 new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
 ```
+
+<!-- more -->
 
 其中对构造函数的参数说明(参考 MDN )：
 

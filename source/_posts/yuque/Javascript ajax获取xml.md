@@ -1,6 +1,6 @@
 
 title: Javascript ajax获取xml
-date: 2018-06-29T14:37:29.000Z
+date: 2018-08-27T14:00:51.000Z
 tags: []
 categories: 
 ---
@@ -9,6 +9,8 @@ categories:
 * AJAX = 异步 JavaScript 和 XML
 * AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术
 * AJAX 是一种用于创建快速动态网页的技术
+
+<!-- more -->
 
 ### <a name="lucpnp"></a>ajax操作xml可以快速建立轻量级的动态网站,下面是实例：
 
