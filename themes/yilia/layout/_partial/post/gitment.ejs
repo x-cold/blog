@@ -1,16 +1,15 @@
-<div id="comments">
-  
-</div>
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
-  const gitment = new Gitment({
-    id: '<%=title%>', // optional
-    owner: 'x-cold',
-    repo: 'blog',
-    oauth: {
-      client_id: '688eb865d77ca0a8a0ff',
-      client_secret: '605bbb7d37362896c098f9889564f8f0be88b6d6',
-    },
-  });
-  gitment.render('comments')
+var gitment = new Gitment({
+  id: "<%=url%>",
+  owner: '<%=theme.gitment_owner%>',
+  repo: '<%=theme.gitment_repo%>',
+  oauth: {
+    client_id: '<%=theme.gitment_oauth.client_id%>',
+    client_secret: '<%=theme.gitment_oauth.client_secret%>',
+  },
+})
+gitment.render('gitment-ctn')
 </script>

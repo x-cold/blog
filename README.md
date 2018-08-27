@@ -1,2 +1,3 @@
-# HexoBlog-resource-x-cold
-X-cold's Blog Powered By Hexo.
+# My Blog
+
+X-cold's Blog Powered By Hexo & Yuqe.
