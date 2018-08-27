@@ -1,6 +1,6 @@
 
 title: JavaScript的一些定位属性
-date: 2018-06-29T14:38:07.000Z
+date: 2018-08-27T14:00:42.000Z
 tags: []
 categories: 
 ---
@@ -11,6 +11,8 @@ categories:
 
 * offsetHeight\offsetWidth
     clientHeight的基础上加border和滚动条的高度\宽度
+
+<!-- more -->
 
 * scrollHeight\scrollWidth
     元素内容的实际高度（内容多了可能会改变对象的实际宽度）

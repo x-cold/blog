@@ -1,6 +1,6 @@
 
 title: Javascript之window对象
-date: 2018-06-29T14:35:34.000Z
+date: 2018-08-27T14:01:12.000Z
 tags: []
 categories: 
 ---
@@ -9,6 +9,8 @@ categories:
 ### <a name="i5qgoi"></a>概述
 
 window对象是BOM顶层(核心对象)，其他对象均为window对象延伸拓展，成为其子对象。直接调用其子对象可以不指明window对象，其子对象或者函数的作用域为全局（我们可以在局部的作用域定义window.variable将变量提升为全局变量）。接下来我们将从其子对象和函数两方面刨析。
+
+<!-- more -->
 
 [w3school对window对象的叙述](http://www.w3school.com.cn/jsref/dom_obj_window.asp)
 

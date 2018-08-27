@@ -1,6 +1,6 @@
 
 title: powershell测试服务器请求时间
-date: 2018-06-29T14:44:12.000Z
+date: 2018-08-27T14:03:31.000Z
 tags: []
 categories: 
 ---
@@ -8,21 +8,22 @@ categories:
 
 * Invoke-WebRequest进行HTTP请求测试
 
-```Bash
+```powershell
 # 关于Invoke-WebRequest基本用法
 PS > Invoke-WebRequest -Uri "http://www.baidu.com"
-
 ```
+
+<!-- more -->
 
 * Measure-Command对上面的命令进行"计时"
 
-```Bash
+```powershell
 PS > Measure-Command -Expression {Invoke-WebRequest -Uri "http://www.baidu.com"}
 ```
 
 ### <a name="o0gfrv"></a>2、源代码：
 
-```Bash
+```powershell
 $url = "http://www.baidu.com"
 # 追踪执行命令耗时
 $timeTaken = Measure-Command -Expression {

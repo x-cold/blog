@@ -1,12 +1,14 @@
 
 title: imagex.exe花式装系统
-date: 2018-06-29T14:38:59.000Z
+date: 2018-08-27T14:05:01.000Z
 tags: []
 categories: 
 ---
 ### <a name="wqiyvt"></a>imagex.exe简介
 
 imagex.exe是一款用来捕获、修改和应用基于文件的磁盘映像以进行快速部署。ImageX可以使用 Windows 映像 (.wim) 文件复制到网络，或者还可以使用其他利用 .wim 映像的技术，如 Windows 安装程序、Windows 部署服务 (Windows DS) 以及系统管理服务器 (SMS) 操作系统功能部署包。
+
+<!-- more -->
 
 ### <a name="ughyat"></a>帮助文档
 

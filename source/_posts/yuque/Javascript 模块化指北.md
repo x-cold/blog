@@ -1,19 +1,16 @@
 
 title: Javascript 模块化指北
-date: 2018-08-09T08:27:56.000Z
+date: 2018-08-27T14:09:56.000Z
 tags: []
 categories: 
 ---
-
-
-![image.png | left | 747x325](https://cdn.nlark.com/lark/0/2018/png/1361/1533801100841-28cf6047-0da2-46dd-9904-5a72c1b98941.png "")
-
-
 ## <a name="k2g2vk"></a>前言
 
-随着 Web 技术的蓬勃发展和依赖的基础设施日益完善，前端领域逐渐从浏览器扩展至服务端（Node.js），桌面端（PC、Android、iOS），乃至于物联网设备（IoT），其中 JavaScript 承载着这些应用程序的核心部分，随着其规模化和复杂度的成倍增长，其软件工程体系也随之建立起来（协同开发、单元测试、需求和缺陷管理等），模块化编程的需求日益迫切；
+随着 Web 技术的蓬勃发展和依赖的基础设施日益完善，前端领域逐渐从浏览器扩展至服务端（Node.js），桌面端（PC、Android、iOS），乃至于物联网设备（IoT），其中 JavaScript 承载着这些应用程序的核心部分，随着其规模化和复杂度的成倍增长，其软件工程体系也随之建立起来（协同开发、单元测试、需求和缺陷管理等），模块化编程的需求日益迫切。
 
 JavaScript 对模块化编程的支持尚未形成规范，难以堪此重任；一时间，江湖侠士挺身而出，一路披荆斩棘，从刀耕火种过渡到面向未来的模块化方案；
+
+<!-- more -->
 
 ## <a name="9qopit"></a>概念
 
@@ -133,7 +130,7 @@ exports.foo = foo;
 
 ## <a name="r463xi"></a>ES Module（推荐使用）
 
-ES Module 是语言层面的模块化方案，由 ES 2015 提出，其规范与 CommonJS 比之 ，导出的值<span data-type="color" style="color:rgb(26, 26, 26)"><span data-type="background" style="background-color:rgb(255, 255, 255)">都可以看成是一个具备多个属性或者方法的对象</span></span>，可以实现互相兼容；但写法上 ES Module 更简洁，跟 Python 接近；
+ES Module 是语言层面的模块化方案，由 ES 2015 提出，其规范与 CommonJS 比之 ，导出的值<span data-type="color" style="color:rgb(26, 26, 26)"><span data-type="background" style="background-color:rgb(255, 255, 255)">都可以看成是一个具备多个属性或者方法的对象</span></span>，可以实现互相兼容；但写法上 ES Module 更简洁，与 Python 接近；
 
 ```javascript
 import fs from 'fs';

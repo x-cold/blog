@@ -1,6 +1,6 @@
 
 title: Docker大行其道—初识
-date: 2018-06-29T14:29:06.000Z
+date: 2018-08-27T14:04:42.000Z
 tags: []
 categories: 
 ---
@@ -9,6 +9,8 @@ categories:
 ### <a name="pkigdt"></a>Docker的前世今生
 
 Docker是基于Go语言实现的云开源项目，目前归于Apache基金会并遵循Apache 2.0协议。诞生于2013年初，前身公司为dotCloud，docker开源后得到受到社会广泛的关注，docker的生态圈体系也逐渐成熟，这家公司也改名为Docker Inc，专注于Docker相关技术和产品开发。
+
+<!-- more -->
 
 Docker最大的目标是：“Build, Ship and Run Any App, Anywhere！”。你只需要通过对应用组件的一次的封装，就能在任意地点构建和运行你的应用。无论是一个完整的应用，或者是某些微服务，甚至到一个完整的操作系统都能成为docker的应用组件。Docker提供一个高效、敏捷和轻量的容器方案，能动态适应各种规模的系统部署需求。
 
