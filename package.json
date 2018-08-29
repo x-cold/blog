@@ -6,12 +6,12 @@
     "version": "3.7.1"
   },
   "scripts": {
-    "clean": "hexo clean",
+    "clean": "npm run clean:yuque && hexo clean",
+    "clean:yuque": "DEBUG=yuque-hexo.* yuque-hexo clean",
     "deploy": "hexo deploy",
     "publish": "npm run clean && npm run deploy",
-    "dev": "hexo s",
-    "sync": "DEBUG=yuque-hexo.* yuque-hexo sync",
-    "clean:yuque": "DEBUG=yuque-hexo.* yuque-hexo clean"
+    "dev": "npm run sync && hexo s",
+    "sync": "DEBUG=yuque-hexo.* yuque-hexo sync"
   },
   "dependencies": {
     "hexo": "^3.7.1",
@@ -25,7 +25,7 @@
     "hexo-renderer-marked": "^0.2.4",
     "hexo-renderer-stylus": "^0.2.0",
     "hexo-server": "^0.1.2",
-    "yuque-hexo": "^1.0.2"
+    "yuque-hexo": "^1.1.0"
   },
   "yuqueConfig": {
     "baseUrl": "https://www.yuque.com/api/v2",
