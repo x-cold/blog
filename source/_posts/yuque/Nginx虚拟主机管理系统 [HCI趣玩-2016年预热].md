@@ -1,9 +1,10 @@
 
 title: Nginx虚拟主机管理系统 [HCI趣玩-2016年预热]
-date: 2018-08-27T14:05:21.000Z
-tags: []
+date: 2015-12-31 00:00:00
+tags: [linux,hci,nginx]
 categories: 
 ---
+
 欢迎来访HCI第一次趣玩作业，本次作业主要是完成简易的ningx虚拟主机管理系统。所涉及的知识涵盖linux的基本管理命令、nginx/ftp服务器配置、简单的前端页面处理和后台逻辑。
 
 ### <a name="iftvmh"></a>Nginx知多少

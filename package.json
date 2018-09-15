@@ -10,8 +10,9 @@
     "clean:yuque": "DEBUG=yuque-hexo.* yuque-hexo clean",
     "deploy": "hexo deploy",
     "publish": "npm run clean && npm run deploy",
-    "dev": "npm run sync && hexo s",
-    "sync": "DEBUG=yuque-hexo.* yuque-hexo sync"
+    "dev": "hexo s",
+    "sync": "DEBUG=yuque-hexo.* yuque-hexo sync",
+    "reset": "npm run clean:yuque && npm run sync"
   },
   "dependencies": {
     "hexo": "^3.7.1",

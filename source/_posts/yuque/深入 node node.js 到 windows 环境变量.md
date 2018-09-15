@@ -1,9 +1,10 @@
 
 title: 深入 node node.js 到 windows 环境变量
-date: 2018-08-27T14:09:32.000Z
-tags: []
+date: 2017-09-12 00:00:00
+tags: [javascript,node.js,windows,环境变量]
 categories: 
 ---
+
 ## <a name="bs4ibp"></a>导读
 
 兴许所有程序员都有命名困难症，在考虑变量、常量、方法、类、文件等命名时，总会千方百计尝试一些语义化的方式去实现。

@@ -1,9 +1,10 @@
 
 title: Terminal前后端任务切换
-date: 2018-08-27T14:04:26.000Z
-tags: []
+date: 2015-01-16 00:00:00
+tags: [linux,shell]
 categories: 
 ---
+
 我们在使用Linux的终端执行一些调用程序的命令时，经常需要用到进程前后端转换
 
 ### <a name="k3e3de"></a>例：

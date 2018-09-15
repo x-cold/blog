@@ -1,9 +1,10 @@
 
 title: Javascript之window对象
-date: 2018-08-27T14:01:12.000Z
-tags: []
+date: 2015-03-01 00:00:00
+tags: [javascript]
 categories: 
 ---
+
 说到window对象我们不得不提及BOM，BOM是browser object model的缩写，正如其名为浏览器对象模型。BOM提供了独立于内容而与浏览器窗口进行交互的对象，BOM由一系列相关的对象组成，其中最主要对象为window，下面我们将分类讲解window对象。
 
 ### <a name="i5qgoi"></a>概述

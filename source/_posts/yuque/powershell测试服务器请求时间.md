@@ -1,9 +1,10 @@
 
 title: powershell测试服务器请求时间
-date: 2018-08-27T14:03:31.000Z
-tags: []
+date: 2015-02-12 00:00:00
+tags: [powershell]
 categories: 
 ---
+
 ### <a name="roedeh"></a>1、使用基本的cmdlet
 
 * Invoke-WebRequest进行HTTP请求测试

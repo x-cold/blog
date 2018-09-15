@@ -1,9 +1,10 @@
 
 title: HCI之前端小任务 [HCI趣玩-2016年预热]
-date: 2018-06-29T14:33:50.000Z
-tags: []
+date: 2015-10-25 00:00:00
+tags: [hcife,linux,hci]
 categories: 
 ---
+
 ## <a name="t1fctq"></a>前端&UI任务
 
 * 形式：2-3人一组，自由组合

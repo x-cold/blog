@@ -1,9 +1,10 @@
 
 title: WebClient获取网络上的资源
-date: 2018-06-29T14:42:24.000Z
-tags: []
+date: 2015-02-15 00:00:00
+tags: [powershell]
 categories: 
 ---
+
 WebClient提供向了 URI 标识的资源发送数据和从 URI 标识的资源接收数据的公共方法.
 
 ### <a name="kczgdx"></a>下载网页内容

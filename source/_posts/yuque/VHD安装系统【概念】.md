@@ -1,9 +1,10 @@
 
 title: VHD安装系统【概念】
-date: 2018-08-27T14:04:51.000Z
-tags: []
+date: 2015-01-22 00:00:00
+tags: [计算机维护]
 categories: 
 ---
+
 ### <a name="ic0loc"></a>VHD简介
 
 ```

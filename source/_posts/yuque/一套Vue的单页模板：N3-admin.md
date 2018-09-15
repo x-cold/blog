@@ -1,9 +1,10 @@
 
 title: 一套Vue的单页模板：N3-admin
-date: 2018-08-27T14:09:18.000Z
-tags: []
+date: 2017-12-01 00:00:00
+tags: [javascript,vue,N3-components]
 categories: 
 ---
+
 趁着周末偷来一点闲，总结近期的工作和学习，想着该花点心思把N3-admin这套基于N3-components的单页应用模板简单的给介绍一下。
 
 > 项目路径: [https://github.com/N3-components/N3-admin](https://github.com/N3-components/N3-admin)

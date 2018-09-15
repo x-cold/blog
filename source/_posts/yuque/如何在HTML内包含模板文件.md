@@ -1,9 +1,10 @@
 
 title: 如何在HTML内包含模板文件
-date: 2018-08-27T14:01:41.000Z
-tags: []
+date: 2015-08-09 00:00:00
+tags: [html,javascript]
 categories: 
 ---
+
 ## <a name="1dtfnz"></a>题记
 
 最近项目开发使用了全新的架构（RequireJS+AngularJS+IonicUI），类似的前端MVVM框架已经深入人心，因此也试着在项目之余写一点小代码实现部分功能。下面我们将用原生的Javascript实现一个在HTML内引入HTML文件的简单小组件。

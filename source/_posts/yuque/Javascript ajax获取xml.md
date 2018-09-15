@@ -1,9 +1,10 @@
 
 title: Javascript ajax获取xml
-date: 2018-08-27T14:00:51.000Z
-tags: []
+date: 2015-02-12 00:00:00
+tags: [javascript,xml]
 categories: 
 ---
+
 ### <a name="drxfnz"></a>ajax简介
 
 * AJAX = 异步 JavaScript 和 XML

@@ -1,9 +1,10 @@
 
 title: JavaScript的一些定位属性
-date: 2018-08-27T14:00:42.000Z
-tags: []
+date: 2015-01-20 00:00:00
+tags: [javascript]
 categories: 
 ---
+
 ### <a name="qb03hx"></a>Javascript 定位属性
 
 * clientHeight\clientWidth
