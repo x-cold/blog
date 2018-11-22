@@ -6,7 +6,7 @@
     "version": "3.7.1"
   },
   "scripts": {
-    "clean": "npm run clean:yuque && hexo clean",
+    "clean": "hexo clean",
     "clean:yuque": "DEBUG=yuque-hexo.* yuque-hexo clean",
     "deploy": "hexo deploy",
     "publish": "npm run clean && npm run deploy",
