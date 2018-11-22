@@ -100,3 +100,7 @@ jsonContent:
       excerpt: false
       categories: false
       tags: true
+
+marked:
+  gfm: true
+  breaks: false
