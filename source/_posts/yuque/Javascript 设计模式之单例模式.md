@@ -1,4 +1,5 @@
 
+---
 title: Javascript 设计模式之单例模式
 date: 2017-09-10 23:28:00 +0800
 tags: [javascript,设计模式]

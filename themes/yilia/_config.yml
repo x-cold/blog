@@ -1,8 +1,8 @@
 # Header
 menu:
-  我的主页: /
   所有文章: /archives
-  随心所欲: /tags/随笔
+  精彩片段: https://www.yuque.com/yinzhi/know
+  关于我: /about
 
 # SubNav
 subnav:
@@ -120,9 +120,10 @@ slider:
 smart_menu:
   innerArchive: '所有文章'
   friends: '友链'
-  aboutme: '关于我'
+  # aboutme: '关于我'
 
 friends:
   Alibaba TXD: https://txd.alibaba-inc.com/
 
-aboutme: 
+# aboutme:
+#   x-cold: /about/

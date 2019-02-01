@@ -1,4 +1,5 @@
 
+---
 title: powershell学习之道-文件夹共享及磁盘映射
 date: 2015-01-19 00:00:00 +0800
 tags: [powershell]

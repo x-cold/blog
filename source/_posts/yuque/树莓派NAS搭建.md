@@ -1,4 +1,5 @@
 
+---
 title: 树莓派NAS搭建
 date: 2015-10-18 19:25:42 +0800
 tags: [linux,树莓派,nas]

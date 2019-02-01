@@ -1,4 +1,5 @@
 
+---
 title: Nginx虚拟主机管理系统 [HCI趣玩-2016年预热]
 date: 2015-12-31 00:00:00 +0800
 tags: [linux,hci,nginx]

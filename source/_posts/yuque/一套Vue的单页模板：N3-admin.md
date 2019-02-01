@@ -1,4 +1,5 @@
 
+---
 title: 一套Vue的单页模板：N3-admin
 date: 2017-12-01 00:00:00 +0800
 tags: [javascript,vue,N3-components]
