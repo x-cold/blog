@@ -1,66 +1,90 @@
 
 ---
-title: 一套Vue的单页模板：N3-admin
-date: 2017-12-01 00:00:00 +0800
-tags: [javascript,vue,N3-components]
-categories: 
----
 
+title: 一套Vue的单页模板：N3-admin
+
+date: 2017-08-13 00:00:00 +0800
+
+tags: javascript,vue,N3-components
+
+---
 趁着周末偷来一点闲，总结近期的工作和学习，想着该花点心思把N3-admin这套基于N3-components的单页应用模板简单的给介绍一下。
 
-> 项目路径: [https://github.com/N3-components/N3-admin](https://github.com/N3-components/N3-admin)
-> ps: 本项目不同于vue-admin等模板项目介绍大量的组件，基础组件的用法请参考：[https://n3-components.github.io/N3-components/](https://n3-components.github.io/N3-components/)
+> 项目路径: [https://github.com/N3-components/N3-admin](https://github.com/N3-components/N3-admin)<br />ps: 本项目不同于vue-admin等模板项目介绍大量的组件，基础组件的用法请参考：[https://n3-components.github.io/N3-components/](https://n3-components.github.io/N3-components/)
 
-## <a name="o929fd"></a>1、概述
 
-首先N3-admin是一个基于 vue / vuex / vue-router / N3 / axios 的单页应用，适用于单页应用的快速上手，并不仅限于N3-components的使用，而是提供一个__比较完善的项目构建的思路和结构__，提供给初学者学习。同时也是一套可扩展的Vue单页应用开发模板。
+<a name="o929fd"></a>
+## [](#o929fd)1、概述
+
+首先N3-admin是一个基于 vue / vuex / vue-router / N3 / axios 的单页应用，适用于单页应用的快速上手，并不仅限于N3-components的使用，而是提供一个**比较完善的项目构建的思路和结构**，提供给初学者学习。同时也是一套可扩展的Vue单页应用开发模板。
 
 <!-- more -->
 
 项目工程基于Vue-cli，因此大部分同学都能快速上手和理解，往下介绍一下特性和结构。
 
-## <a name="rfs6co"></a>2、特性
+<a name="rfs6co"></a>
+## [](#rfs6co)2、特性
 
-* [x] 项目工程相关
-    * 开发环境；静态文件服务器、HTTP代理、热更新
-    * 生产构建：代码编译提取压缩合并混淆hash命名base64~
-    * eslint
-    * babel
-    * webpack 2.x
-* [x] vue
-    * 组件分级 [路由级组件、复用型组件、基础组件(N3)]
-    * Vue扩展 [filters、directives等]
-* [x] vue-router
-    * 二级路由
-    * 转场动画
-    * 路由拦截器
-* [x] vuex
-    * 多模块(module)支持
-* [x] axios
-    * 支持多实例
-    * 请求、响应拦截器
-    * Vue 扩展，通过实例的方法可访问
-* [x] layout 布局
-* [x] 全局进度条 Nprogress
-* [x] css 预处理
-    * less
-    * postcss
-    * [] stylus         <=  仅需安装预处理器和loader
-    * [] sass / scss    <=  仅需安装预处理器和loader
-* [x] API 调用支持
-    * 接口配置
-    * [x] mock
+- [x] 项目工程相关
+  - 开发环境；静态文件服务器、HTTP代理、热更新
 
-## <a name="ikq0zs"></a>3、布局方式
+  - 生产构建：代码编译提取压缩合并混淆hash命名base64~
+
+  - eslint
+
+  - babel
+
+  - webpack 2.x
+
+- [x] vue
+  - 组件分级 [路由级组件、复用型组件、基础组件(N3)]
+
+  - Vue扩展 [filters、directives等]
+
+- [x] vue-router
+  - 二级路由
+
+  - 转场动画
+
+  - 路由拦截器
+
+- [x] vuex
+  - 多模块(module)支持
+
+- [x] axios
+  - 支持多实例
+
+  - 请求、响应拦截器
+
+  - Vue 扩展，通过实例的方法可访问
+
+- [x] layout 布局
+- [x] 全局进度条 Nprogress
+- [x] css 预处理
+  - less
+
+  - postcss
+
+  - [] stylus         <=  仅需安装预处理器和loader
+
+  - [] sass / scss    <=  仅需安装预处理器和loader
+
+- [x] API 调用支持
+  - 接口配置
+
+  - [x] mock
+
+
+<a name="ikq0zs"></a>
+## [](#ikq0zs)3、布局方式
 
 > 二级路由下生效
 
 
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283697133-97fca5d9-8f9c-4b07-9e93-55e49b950117.png#width=747)
 
-![image.png | left | 747x572](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283697133-97fca5d9-8f9c-4b07-9e93-55e49b950117.png "")
-
-
-## <a name="6qzrsw"></a>4、文件结构
+<a name="6qzrsw"></a>
+## [](#6qzrsw)4、文件结构
 
 ```
 .
@@ -146,47 +170,43 @@ categories:
             └── Hello.spec.js
 ```
 
-## <a name="mgo0eg"></a>5、使用说明
+<a name="mgo0eg"></a>
+## [](#mgo0eg)5、使用说明
 
-* 开发环境
+- 开发环境
+
 
 ```
 npm run dev
 ```
 
-* 生产环境
+- 生产环境
+
 
 ```
 npm run build
 ```
 
-## <a name="zkqutn"></a>6、效果图
+<a name="zkqutn"></a>
+## [](#zkqutn)6、效果图
 
-* 总览
-
-
-
-![image.png | left | 747x297](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283709889-82696a81-067e-4481-ac8a-6ecfc91a3909.png "")
+- 总览
 
 
-* 登录
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283709889-82696a81-067e-4481-ac8a-6ecfc91a3909.png#width=747)
+
+- 登录
 
 
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283720334-3d42f6eb-8edd-4d3a-9a98-ab8655c1d06f.png#width=747)
 
-![image.png | left | 747x374](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283720334-3d42f6eb-8edd-4d3a-9a98-ab8655c1d06f.png "")
-
-
-* Table
+- Table
 
 
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283730540-8cb186d9-ee7f-44fb-a9ae-c8c015731e22.png#width=747)
 
-![image.png | left | 747x304](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283730540-8cb186d9-ee7f-44fb-a9ae-c8c015731e22.png "")
-
-
-* Form
+- Form
 
 
-
-![image.png | left | 747x164](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283737892-39a531dc-d7a2-4e2d-8e06-3a649841ed24.png "")
-
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283737892-39a531dc-d7a2-4e2d-8e06-3a649841ed24.png#width=747)
 

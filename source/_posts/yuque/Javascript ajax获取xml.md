@@ -1,26 +1,34 @@
 
 ---
+
 title: Javascript ajax获取xml
+
 date: 2015-02-12 00:00:00 +0800
-tags: [javascript,xml]
-categories: 
+
+tags: javascript,xml
+
 ---
+<a name="drxfnz"></a>
+### [](#drxfnz)ajax简介
 
-### <a name="drxfnz"></a>ajax简介
+- AJAX = 异步 JavaScript 和 XML
 
-* AJAX = 异步 JavaScript 和 XML
-* AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术
-* AJAX 是一种用于创建快速动态网页的技术
+- AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术
+
+- AJAX 是一种用于创建快速动态网页的技术
+
 
 <!-- more -->
 
-### <a name="lucpnp"></a>ajax操作xml可以快速建立轻量级的动态网站,下面是实例：
+<a name="lucpnp"></a>
+### [](#lucpnp)ajax操作xml可以快速建立轻量级的动态网站,下面是实例：
 
 [查看demo](http://7u2liq.com1.z0.glb.clouddn.com/blog/demo/ajax/html/)
 
-* /js/state.js
+- /js/state.js
 
-```js
+
+```javascript
 function loadXMLDoc(url) {
 	var xmlhttp;
 	var content,tr,temp,data;
@@ -82,10 +90,10 @@ function loadXMLDoc(url) {
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 }
-
 ```
 
-* /html/index.html
+- /html/index.html
+
 
 ```html
 <!DOCTYPE html>
@@ -132,7 +140,8 @@ function loadXMLDoc(url) {
 </html>
 ```
 
-* /xml/data.xml
+- /xml/data.xml
+
 
 ```xml
 <!--  Contacts List -->

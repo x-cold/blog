@@ -1,12 +1,15 @@
 
 ---
-title: 如何在HTML内包含模板文件
-date: 2015-08-09 00:00:00 +0800
-tags: [html,javascript]
-categories: 
----
 
-## <a name="1dtfnz"></a>题记
+title: 如何在HTML内包含模板文件
+
+date: 2015-08-09 00:00:00 +0800
+
+tags: html,javascript
+
+---
+<a name="1dtfnz"></a>
+## [](#1dtfnz)题记
 
 最近项目开发使用了全新的架构（RequireJS+AngularJS+IonicUI），类似的前端MVVM框架已经深入人心，因此也试着在项目之余写一点小代码实现部分功能。下面我们将用原生的Javascript实现一个在HTML内引入HTML文件的简单小组件。
 
@@ -14,19 +17,22 @@ categories:
 
 <!-- more -->
 
-<em>在后端的模板引擎内我们可以直接使用</em><em><code>include</code></em><em>类似的语句包含其他的模板，在一些SPA(Single Page APP)也是利用了类似于</em><em><code>ng-include</code></em><em>的写法复用HTML模板</em>
+_在后端的模板引擎内我们可以直接使用`include`类似的语句包含其他的模板，在一些SPA(Single Page APP)也是利用了类似于`ng-include`的写法复用HTML模板_
 
-### <a name="onvkyr"></a>设计思路：
+<a name="onvkyr"></a>
+### [](#onvkyr)设计思路：
 
-* HTML标签：添加`include-html`属性，用于置入引用的HTML模板的URL
+- HTML标签：添加`include-html`属性，用于置入引用的HTML模板的URL
+
 
 ```html
 <div include-html="./header.html"></div>
 ```
 
-* 获取所有URL的值
+- 获取所有URL的值
 
-```js
+
+```javascript
 var dom = document.getElementsByTagName('*');
 for (var i = 0; i < dom.length; i++) {
 	var bakNode = dom[i];
@@ -35,9 +41,10 @@ for (var i = 0; i < dom.length; i++) {
 }
 ```
 
-* 发送GET请求获取URL指向的模板页面并进行处理
+- 发送GET请求获取URL指向的模板页面并进行处理
 
-```js
+
+```javascript
 /**
  *	html文件包含器
  *	调用方式：DOM内插入属性'include-html="路径"'
@@ -87,13 +94,16 @@ var loadHTML = function(method, url, async, callback) {
 }
 ```
 
-* 递归调用 => 嵌套调用
+- 递归调用 => 嵌套调用
+
 
 这里还需要进行算法优化，借着午后小憩的时间暂且先完成此DEMO，后继完善。
 
-### <a name="551zyg"></a>完整DEMO
+<a name="551zyg"></a>
+### [](#551zyg)完整DEMO
 
 1. index.html
+
 
 ```html
 <!DOCTYPE html>
@@ -111,6 +121,7 @@ var loadHTML = function(method, url, async, callback) {
 
 1. index.html
 
+
 ```html
 <!DOCTYPE html>
 <header>
@@ -122,7 +133,8 @@ var loadHTML = function(method, url, async, callback) {
 
 1. demo.js
 
-```js
+
+```javascript
 /**
  *  数据校验
  */

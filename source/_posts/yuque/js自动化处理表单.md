@@ -1,24 +1,29 @@
 
 ---
-title: js自动化处理表单
-date: 2015-01-07 00:00:00 +0800
-tags: [javascript,自动化]
-categories: 
----
 
+title: js自动化处理表单
+
+date: 2015-01-07 00:00:00 +0800
+
+tags: javascript,自动化
+
+---
 我们在浏览网页时偶尔会碰到一些需要重复选择各种选项的尴尬局面，我们希望可以有一种工具可以帮助我们自动完成填表或者选择选卡项目。
 
-### <a name="ane9es"></a>实现原理
+<a name="ane9es"></a>
+### [](#ane9es)实现原理
 
 调用浏览器的控制台运行js脚本，从而达到自动填写表单和选择勾选项，以及自动提交等功能。
 
 <!-- more -->
 
-### <a name="wccbgv"></a>实现方法（例子）
+<a name="wccbgv"></a>
+### [](#wccbgv)实现方法（例子）
 
-* 获取到表单元素，首先需要浏览到你需要操作的网页，通过浏览器的审查元素或者查看源代码可以获取到按钮/选项/输入框在文档中的位置。
+- 获取到表单元素，首先需要浏览到你需要操作的网页，通过浏览器的审查元素或者查看源代码可以获取到按钮/选项/输入框在文档中的位置。
 
-```js
+
+```javascript
 //获取表单对象
 var form = document.getElementsByTagName('form')[0];
 var btn = document.getElementById('btn1');
@@ -28,9 +33,10 @@ var username = document.getElementById('username');
 var password = document.getElementById('password');
 ```
 
-* 利用js进行自动选择选项和提交功能。(自动填表也可以如法炮制)
+- 利用js进行自动选择选项和提交功能。(自动填表也可以如法炮制)
 
-```js
+
+```javascript
 //遍历，填写选项
 for (var i = 0, len = selList.length; i < len; i++) {
 	selList[i].options[1].selected = 'selected';
@@ -46,18 +52,22 @@ btn.click();
 }
 ```
 
-### <a name="veydur"></a>小结
+<a name="veydur"></a>
+### [](#veydur)小结
 
-* 需要对html有基本的了解，才能快速地通过审查元素找到需要操作的DOM对象
-* 在一些带有iframe框架的网页，可以使用下面这条js语句获取iframe
+- 需要对html有基本的了解，才能快速地通过审查元素找到需要操作的DOM对象
 
-```js
+- 在一些带有iframe框架的网页，可以使用下面这条js语句获取iframe
+
+
+```javascript
 var frame = window.frames["zhuti"].document.getElementById('divJs');
 ```
 
-* 在demo网页上通过浏览器控制台运行可以的显示效果
+- 在demo网页上通过浏览器控制台运行可以的显示效果
 
-```js
+
+```javascript
 (function juadge(num) {
 	//获取表单对象
 	var form = document.getElementsByTagName('form')[0];
@@ -93,7 +103,8 @@ var frame = window.frames["zhuti"].document.getElementById('divJs');
 
 [查看demo](http://7u2liq.com1.z0.glb.clouddn.com/blog/demo/js自动处理表单/)
 
-### <a name="v540ts"></a>demo源代码
+<a name="v540ts"></a>
+### [](#v540ts)demo源代码
 
 ```html
 <!DOCTYPE html>

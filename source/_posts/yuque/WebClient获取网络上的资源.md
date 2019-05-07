@@ -1,14 +1,17 @@
 
 ---
-title: WebClient获取网络上的资源
-date: 2015-02-15 00:00:00 +0800
-tags: [powershell]
-categories: 
----
 
+title: WebClient获取网络上的资源
+
+date: 2015-02-15 00:00:00 +0800
+
+tags: powershell
+
+---
 WebClient提供向了 URI 标识的资源发送数据和从 URI 标识的资源接收数据的公共方法.
 
-### <a name="kczgdx"></a>下载网页内容
+<a name="kczgdx"></a>
+### [](#kczgdx)下载网页内容
 
 1.创建WebClient对象：
 
@@ -29,7 +32,8 @@ $str = $web.DownloadString("http://localhost")
 $str
 ```
 
-### <a name="0a7vym"></a>获取文件资源
+<a name="0a7vym"></a>
+### [](#0a7vym)获取文件资源
 
 ```
 $url = "http://path.to/file"

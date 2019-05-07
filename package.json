@@ -25,12 +25,14 @@
     "hexo-renderer-ejs": "^0.1.0",
     "hexo-renderer-marked": "^0.2.4",
     "hexo-renderer-stylus": "^0.2.0",
-    "hexo-server": "^0.1.2",
-    "yuque-hexo": "^1.2.2"
+    "hexo-server": "^0.1.2"
   },
   "yuqueConfig": {
     "baseUrl": "https://www.yuque.com/api/v2",
     "login": "yinzhi",
     "repo": "blog"
+  },
+  "devDependencies": {
+    "yuque-hexo": "^1.6.0"
   }
 }
