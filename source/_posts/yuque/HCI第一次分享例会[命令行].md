@@ -5,9 +5,10 @@ title: HCI第一次分享例会[命令行]
 
 date: 2015-10-25 00:00:00 +0800
 
-tags: cmd,linux,hci
+tags: [cmd,linux,hci]
 
 ---
+
 欢迎来访HCI第一次例会分享，今天小编（HCI-鹏飞）需要分享的是linux和windows命令行的基本命令以及技巧。
 
 <a name="bovtlm"></a>

@@ -5,7 +5,7 @@ title: 一套Vue的单页模板：N3-admin
 
 date: 2017-08-13 00:00:00 +0800
 
-tags: javascript,vue,N3-components
+tags: [javascript,vue,N3-components]
 
 ---
 趁着周末偷来一点闲，总结近期的工作和学习，想着该花点心思把N3-admin这套基于N3-components的单页应用模板简单的给介绍一下。

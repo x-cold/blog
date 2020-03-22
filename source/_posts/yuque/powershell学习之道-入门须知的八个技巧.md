@@ -5,7 +5,7 @@ title: powershell学习之道-入门须知的八个技巧
 
 date: 2015-01-28 00:00:00 +0800
 
-tags: powershell
+tags: [powershell]
 
 ---
 <a name="k8u7pv"></a>

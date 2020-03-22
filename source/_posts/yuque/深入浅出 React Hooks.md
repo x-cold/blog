@@ -14,6 +14,8 @@ tags: []
 
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1557142220425-364dee55-ce15-4c83-98d1-8e1ec9ada26e.png#align=left&display=inline&height=540&name=image.png&originHeight=1080&originWidth=1920&size=141753&status=done&width=960)
 
+> 直播回放链接：[云栖社区](https://yq.aliyun.com/articles/700174) ([@x-cold](https://github.com/x-cold))
+
 
 <a name="4wRfh"></a>
 ## React Hooks 是什么？
@@ -198,7 +200,7 @@ const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 ```
 
 ```jsx
-import { useState, useMeno } from 'react';
+import { useState, useMemo } from 'react';
 import ReactDOM from 'react-dom';
 
 function Time() {
@@ -236,7 +238,7 @@ import { useState, useContext, createContext } from 'react';
 import ReactDOM from 'react-dom';
 
 // 1. 使用 createContext 创建上下文
-const UserContext = new createContext();
+const UserContext = createContext();
 
 // 2. 创建 Provider
 const UserProvider = props => {
@@ -282,7 +284,7 @@ import { useState, useContext, createContext } from 'react';
 import ReactDOM from 'react-dom';
 
 // 1. 使用 createContext 创建上下文
-const UserContext = new createContext();
+const UserContext = createContext();
 
 // 2. 创建 Provider
 const UserProvider = props => {

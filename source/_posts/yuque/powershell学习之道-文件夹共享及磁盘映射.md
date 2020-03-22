@@ -5,9 +5,10 @@ title: powershell学习之道-文件夹共享及磁盘映射
 
 date: 2015-01-19 00:00:00 +0800
 
-tags: powershell
+tags: [powershell]
 
 ---
+
 在Linux环境下，我们很轻易就能得心应手地通过命令操作一切事物，在Windows下，Powershell也算是后起之秀，提供大量的cmdlet以及c#的横向拓展。下面将由小编带领大家通过Powershell实现文件夹共享，当然文中也不会冷落cmd这枚老将。
 
 <a name="7a29ll"></a>

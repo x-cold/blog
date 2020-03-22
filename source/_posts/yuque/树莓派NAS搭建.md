@@ -5,7 +5,7 @@ title: 树莓派NAS搭建
 
 date: 2015-10-18 19:25:42 +0800
 
-tags: linux,树莓派,nas
+tags: [linux,树莓派,nas]
 
 ---
 初探树莓派，便可知道其用途广泛，本篇博文将介绍如何使用树莓派搭建基于Linux和SMB协议的NAS服务器。

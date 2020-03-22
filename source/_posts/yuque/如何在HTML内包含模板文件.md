@@ -5,9 +5,10 @@ title: 如何在HTML内包含模板文件
 
 date: 2015-08-09 00:00:00 +0800
 
-tags: html,javascript
+tags: [html,javascript]
 
 ---
+
 <a name="1dtfnz"></a>
 ## [](#1dtfnz)题记
 

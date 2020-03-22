@@ -5,9 +5,10 @@ title: HCI之前端小任务 [HCI趣玩-2016年预热]
 
 date: 2015-10-25 00:00:00 +0800
 
-tags: hcife,linux,hci
+tags: [hcife,linux,hci]
 
 ---
+
 <a name="t1fctq"></a>
 ## [](#t1fctq)前端&UI任务
 

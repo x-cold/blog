@@ -5,9 +5,10 @@ title: CSS优先级
 
 date: 2015-04-18 00:00:00 +0800
 
-tags: css
+tags: [css]
 
 ---
+
 <a name="t0ngis"></a>
 ## [](#t0ngis)优先级排序
 

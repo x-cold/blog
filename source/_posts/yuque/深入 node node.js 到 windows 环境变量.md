@@ -5,9 +5,10 @@ title: 深入 node node.js 到 windows 环境变量
 
 date: 2017-08-19 00:00:00 +0800
 
-tags: javascript,node.js,windows,环境变量
+tags: [javascript,node.js,windows,环境变量]
 
 ---
+
 <a name="bs4ibp"></a>
 ## [](#bs4ibp)导读
 

@@ -5,7 +5,7 @@ title: Javascript ajax获取xml
 
 date: 2015-02-12 00:00:00 +0800
 
-tags: javascript,xml
+tags: [javascript,xml]
 
 ---
 <a name="drxfnz"></a>

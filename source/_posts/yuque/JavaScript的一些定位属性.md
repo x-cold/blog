@@ -5,7 +5,7 @@ title: JavaScript的一些定位属性
 
 date: 2015-01-20 00:00:00 +0800
 
-tags: javascript
+tags: [javascript]
 
 ---
 <a name="qb03hx"></a>

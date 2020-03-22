@@ -5,9 +5,10 @@ title: WebClient获取网络上的资源
 
 date: 2015-02-15 00:00:00 +0800
 
-tags: powershell
+tags: [powershell]
 
 ---
+
 WebClient提供向了 URI 标识的资源发送数据和从 URI 标识的资源接收数据的公共方法.
 
 <a name="kczgdx"></a>
