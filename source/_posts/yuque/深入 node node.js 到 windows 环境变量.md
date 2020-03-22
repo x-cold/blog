@@ -3,21 +3,25 @@
 
 title: 深入 node node.js 到 windows 环境变量
 
+urlname: ha07x2
+
 date: 2017-08-19 00:00:00 +0800
 
 tags: [javascript,node.js,windows,环境变量]
 
+categories: []
+
 ---
 
 <a name="bs4ibp"></a>
-## [](#bs4ibp)导读
+## 导读
 
 兴许所有程序员都有命名困难症，在考虑变量、常量、方法、类、文件等命名时，总会千方百计尝试一些语义化的方式去实现。
 
 曾经有那么一段时间，一些node初学的同学遇到了同样的问题：Hello World 跑不动！！！
 
 <a name="pyovmr"></a>
-## [](#pyovmr)0. 谜之 Hello World
+## 0. 谜之 Hello World
 
 问题的起源非常简单，当我们在编写一个入门程序时，就会迅速想起那句脍炙人口的语句：
 
@@ -35,14 +39,14 @@ console.log('Hello World');
 （PS：实际上无论是Mac、Linux用户，亦或是WIndows中使用Powershell或其他终端环境的同学都无法与此问题完美邂逅）
 
 <a name="revyzg"></a>
-## [](#revyzg)1. 初步分析
+## 1. 初步分析
 
 此时此刻，心中一阵失落，居然连入门的示例程序都无法运行，不禁一阵瞎想：是否该放弃node.js了？
 
 言归正传，细心的同学会发现，报错的源头来自`Windows Script Host`，下简称`WSH`，我们不难查到它是 Windows 操作系统脚本语言程序（script，即：脚本）的运行环境。
 
 <a name="cpxapg"></a>
-## [](#cpxapg)2. 执行了什么？
+## 2. 执行了什么？
 
 简单分析一下`node node.js`这条命令，我们会很自然地认定为：执行node.exe程序，参数为node.js。
 
@@ -53,7 +57,7 @@ console.log('Hello World');
 ![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283579297-58c3fa0b-a64b-48c6-b48e-2d2d95788c1b.png#width=573)
 
 <a name="wgicug"></a>
-### [](#wgicug)2.1 执行程序的路径
+### 2.1 执行程序的路径
 
 根据试验的结果不难猜出`node node.js`命令实际执行了`node.js`这个脚本文件，从而调起`WSH`服务，进而出现上图的报错。
 
@@ -62,14 +66,14 @@ console.log('Hello World');
 （PS：各位看官切莫介怀''作为路径分隔符，毕竟在cmd下'/'担任参数分隔符的要职）
 
 <a name="lh6byo"></a>
-### [](#lh6byo)2.2 补全程序的路径
+### 2.2 补全程序的路径
 
 先讲讲通用的说法，无论是 * nix 、OS/2 、DOS 亦或是 windows，其terminal都可以通过一个特殊的环境变量`PATH`进行“补全”（关于环境变量的详细内容本文不作介绍）。
 
 接下来我们通过ping命令先做简要说明：
 
 <a name="18wgxt"></a>
-#### [](#18wgxt)2.2.1 定位程序的路径
+#### 2.2.1 定位程序的路径
 
 ![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283587792-4ced2a94-ce79-49de-8ff3-2fc6864b9c1d.png#width=462)
 
@@ -78,7 +82,7 @@ console.log('Hello World');
 ![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283599104-8cb6d3a0-8146-4013-8050-c72dc48774a3.png#width=747)
 
 <a name="6803ix"></a>
-#### [](#6803ix)2.2.2 补全后缀名(仅windows、dos)
+#### 2.2.2 补全后缀名(仅windows、dos)
 
 由于windows的可执行的概念和 * nix 略有不同，因此在windows平台下还需要对程序进行后缀名的补全。
 
@@ -92,7 +96,7 @@ E:\test>echo %PATHEXT%
 最终我们补全的程序路径为：`C:\WINDOWS\system32\ping.exe`，
 
 <a name="gsrbge"></a>
-#### [](#gsrbge)2.2.3 特别注意(仅windows、dos)
+#### 2.2.3 特别注意(仅windows、dos)
 
 针对于cmd环境，当前目录也会作为路径补全的一部分，并且优先级最高。在当前目录下，我们创建一个`ping.bat`的脚本，并填充以下内容：
 
@@ -107,19 +111,19 @@ echo %~dpnx0
 ![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283614729-6819eb33-989b-4506-8bed-b1adbcf1e8fe.png#width=569)
 
 <a name="sl0woo"></a>
-#### [](#sl0woo)2.2.4 小结
+#### 2.2.4 小结
 
 我们也额外地发现windows的默认可执行的后缀名包含`.JS`，由此可推断最初的那条`node node.js`命令最终补全的程序路径为：`E:\test\node.js`
 
 <a name="gpfwgw"></a>
-## [](#gpfwgw)3 打开方式？
+## 3 打开方式？
 
 从2.2.4的结论中能显而易见的推导出命令执行的程序为`node.js`脚本文件，那么它为什么是通过`WSH`去执行的呢？
 
 答案其实很明显，有个通俗易懂的概念，叫做打开方式，而windows的打开方式由`assoc`和`ftype`确定。
 
 <a name="s6hrwf"></a>
-### [](#s6hrwf)3.1 后缀名与打开方式
+### 3.1 后缀名与打开方式
 
 尝试性的跑一跑`assoc`命令，发现其控制着后缀名与打开方式`ftype`的关系。
 
@@ -141,7 +145,7 @@ assoc | findstr .js
 不难看出`.js`文件将会通过`JSFile`这个打开方式去执行。
 
 <a name="i9gzih"></a>
-### [](#i9gzih)3.2 打开方式与执行程序
+### 3.2 打开方式与执行程序
 
 类似的，我们也可以运行一下ftype命令，其定义了可执行程序以及调用的参数。
 
@@ -162,7 +166,7 @@ JSXFile="C:\Program Files (x86)\Adobe\Adobe Utilities - CS6\ExtendScript Toolkit
 最终`node node.js`等价于`E:\test\node.js node.js`。
 
 <a name="e1buxd"></a>
-### [](#e1buxd)3.3 怎么破？
+### 3.3 怎么破？
 
 - 发动想象力吧，别再叫`node.js`了~
 
@@ -172,22 +176,22 @@ JSXFile="C:\Program Files (x86)\Adobe\Adobe Utilities - CS6\ExtendScript Toolkit
 
 
 <a name="fgo9hh"></a>
-## [](#fgo9hh)4. 扩展学习
+## 4. 扩展学习
 
 操作系统层面通过`PATH`等环境变量进行资源定位的思路实际上也被广泛应用在各种场景下，下面也举两个常见的栗子说明一下。
 
 <a name="lvw4dm"></a>
-### [](#lvw4dm)4.1 npm 包定位
+### 4.1 npm 包定位
 
 CommonJS 规范中通过`require`去加载模块时，通过路径补全的策略（详情推荐阅读《深入浅出Node.js》），可以省略模块的路径，后缀名，甚至连/index也能自动补全。
 
 <a name="t4egqi"></a>
-### [](#t4egqi)4.2 webpack资源定位
+### 4.2 webpack资源定位
 
 嘿，resolve中的extensions、alias等思路是否也如出一辙呢？
 
 <a name="fqyqxe"></a>
-## [](#fqyqxe)5. 总结
+## 5. 总结
 
 全文原创·此文为随走随记，全文思维略带感情请勿拍砖。
 

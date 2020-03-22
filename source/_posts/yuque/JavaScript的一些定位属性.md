@@ -3,13 +3,18 @@
 
 title: JavaScript的一些定位属性
 
+urlname: mdfepb
+
 date: 2015-01-20 00:00:00 +0800
 
 tags: [javascript]
 
+categories: []
+
 ---
+
 <a name="qb03hx"></a>
-### [](#qb03hx)Javascript 定位属性
+### Javascript 定位属性
 
 - clientHeight\clientWidth<br />可见窗口除去margin和border之后的高度\宽度
 
@@ -34,7 +39,7 @@ tags: [javascript]
 关于offsetParent，不同的浏览器有不同的实现算法，其中一种常见布局在各种浏览器中 offsetParent 是一样的：<br />外层元素div的position计算值是relative、absolute时，内层元素div的offsetParent 总是外层元素div。
 
 <a name="8btqgx"></a>
-### [](#8btqgx)下面是一个简单的demo页面
+### 下面是一个简单的demo页面
 
 [查看demo](http://7u2liq.com1.z0.glb.clouddn.com/blog/demo/JS定位属性/)
 

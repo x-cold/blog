@@ -3,16 +3,20 @@
 
 title: Docker大行其道—初识
 
+urlname: zphz8h
+
 date: 2016-05-29 00:00:00 +0800
 
 tags: [linux,docker]
+
+categories: []
 
 ---
 
 随着分布式、云计算、大数据的火热爆发，大量的云计算集群出现，光凭计算机硬件配置的已经无法再次一较高下，虚拟化成为其中最核心的技术。虚拟化既可以通过硬件模拟，也可以通过操作系统层面去实现，近年来热火朝天的容器轻量级虚拟化，保留了操作系统本身的机制和特性，而Docker在此脱颖而出。
 
 <a name="pkigdt"></a>
-### [](#pkigdt)Docker的前世今生
+### Docker的前世今生
 
 Docker是基于Go语言实现的云开源项目，目前归于Apache基金会并遵循Apache 2.0协议。诞生于2013年初，前身公司为dotCloud，docker开源后得到受到社会广泛的关注，docker的生态圈体系也逐渐成熟，这家公司也改名为Docker Inc，专注于Docker相关技术和产品开发。
 
@@ -31,10 +35,10 @@ Docker运行容器前需要检查本地是否存在对应的镜像，如果不�
 Docker开源代码地址：[https://github.com/docker/docker](https://github.com/docker/docker)
 
 <a name="s3oqts"></a>
-### [](#s3oqts)Docker得天独厚的优势
+### Docker得天独厚的优势
 
 <a name="2t21gp"></a>
-### [](#2t21gp)新的部署方式
+### 新的部署方式
 
 假如当前有这么一个场景：“由于业务增长，公司的一个网站项目需要迁移到新的服务器”。按照传统方案，我们很可能需要作一些重复性的工作。首先需要在新的服务器上安装对应的运行环境以及对应的依赖，如LAMP（Linux+Apache+Mysql+PHP），创建对应的用户或组并进行文件权限的管理，耗费大量的精力后，还需要对该环境进行测试，最后才能部署上线。试想一下，如果这样的需求多少十几倍，这些工作需要重复的执行。
 
@@ -43,7 +47,7 @@ Docker开源代码地址：[https://github.com/docker/docker](https://github.com
 而Docker提供一种极为简便的操作方式，通过容器来进行应用打包，我们可以通过封装成镜像或是编写Dockerfile等方式来进行打包，这意味着在新的服务器上只需要启动所需要的容器即可。一来节省了大量的时间投入，而来降低了部署过程出现问题带来的隐患。
 
 <a name="94q1bk"></a>
-### [](#94q1bk)运维策略的革新
+### 运维策略的革新
 
 1. 极速交付和部署
 
@@ -88,7 +92,7 @@ Kubernetes是Google开源的Docker容器集群管理系统，为容器化的应�
 关于Docker的标准，请参考：[http://www.open-open.com/lib/view/open1444481959869.html](http://www.open-open.com/lib/view/open1444481959869.html)
 
 <a name="70g4ri"></a>
-### [](#70g4ri)文章小节
+### 文章小节
 
 全文主要对docker进行概念性的介绍，想必读到这里，docker再也不会是一个陌生的技术。无论是在针对应用的自动化运维还是PAAS的管理策略，docker都能提供一套优秀的解决方案，docker在领域内倍受青睐，让运维的工作有了前所未有的优质体验。如果你也被docker的魅力深深折服的话，欢迎加入到docker的学习行列一同探索。
 

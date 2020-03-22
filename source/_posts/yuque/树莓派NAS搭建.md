@@ -3,15 +3,20 @@
 
 title: 树莓派NAS搭建
 
+urlname: cgm3ug
+
 date: 2015-10-18 19:25:42 +0800
 
 tags: [linux,树莓派,nas]
 
+categories: []
+
 ---
+
 初探树莓派，便可知道其用途广泛，本篇博文将介绍如何使用树莓派搭建基于Linux和SMB协议的NAS服务器。
 
 <a name="el9zps"></a>
-### [](#el9zps)树莓派简介
+### 树莓派简介
 
 树莓派（Raspberry pi，简写为RPi，或者RasPi/RPi）是目前比较常见的卡片电脑，为学生计算机编程教育而设计。其系统基于Linux(或者最新发布的Windows 10 IoT)。仅有巴掌大小的PCB板可谓麻雀虽小五脏俱全，可以像普通的PC那样工作。树莓派型号目前分为A\B型，其中A型的配置较低，不适合生产环境，本人以B+ model为例讲解后面的内容。树莓派目前主要被用于一些简单的WEB服务以及智能设备、由于Python强大的底层库支持，树莓派也常常被用极客们用于改装各种电子元件。
 
@@ -22,12 +27,12 @@ _基本配置：5V2A Micro USB接口、512MB内存、HDMI视频输出口、音�
 推荐链接：[树莓派入门须知](http://www.shumeipai.net/thread-21180-1-1.html?_dsign=81e52e75)
 
 <a name="ecixgc"></a>
-### [](#ecixgc)系统安装
+### 系统安装
 
 略。
 
 <a name="rg8qig"></a>
-### [](#rg8qig)入门基础
+### 入门基础
 
 首先，你必须学会使用简单的linux命令以及工具，从上面的系统安装教程我们可以了解到树莓派一般都会带上一个debian系列的linux系统。下面是常用的linux命令和工具：
 
@@ -45,7 +50,7 @@ _基本配置：5V2A Micro USB接口、512MB内存、HDMI视频输出口、音�
 
 
 <a name="4786hc"></a>
-### [](#4786hc)NAS大致构架简介
+### NAS大致构架简介
 
 - 简介
 

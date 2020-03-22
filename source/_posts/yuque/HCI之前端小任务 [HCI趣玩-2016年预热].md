@@ -3,14 +3,18 @@
 
 title: HCI之前端小任务 [HCI趣玩-2016年预热]
 
+urlname: ouhcn3
+
 date: 2015-10-25 00:00:00 +0800
 
 tags: [hcife,linux,hci]
 
+categories: []
+
 ---
 
 <a name="t1fctq"></a>
-## [](#t1fctq)前端&UI任务
+## 前端&UI任务
 
 - 形式：2-3人一组，自由组合
 
@@ -22,7 +26,7 @@ tags: [hcife,linux,hci]
 ![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282803431-b5780dbf-b24e-4d63-b6c0-1dd9c6b59ced.png#width=)<br />![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282822336-02f84bf5-0ff8-4cc7-a76b-8c970b23e0c3.png#width=)<br />![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282827085-fefe2904-0512-476c-aed4-10e9416f03b8.png#width=)
 
 <a name="319xxu"></a>
-### [](#319xxu)js插件
+### js插件
 
 - 静态资源如js,css,图片等资源的js打包加载器
 
@@ -34,7 +38,7 @@ tags: [hcife,linux,hci]
 
 
 <a name="3xhpmu"></a>
-### [](#3xhpmu)ui图标
+### ui图标
 
 - 设计一套ui图标
 
@@ -44,7 +48,7 @@ tags: [hcife,linux,hci]
 
 
 <a name="kc3sqn"></a>
-### [](#kc3sqn)webgl建模
+### webgl建模
 
 - 构建一个简单的3D世界
 

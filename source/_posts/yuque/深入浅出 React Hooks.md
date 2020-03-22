@@ -3,9 +3,13 @@
 
 title: 深入浅出 React Hooks
 
+urlname: sm7slk
+
 date: 2019-04-23 23:13:42 +0800
 
 tags: []
+
+categories: []
 
 ---
 <a name="article-title"></a>
@@ -23,6 +27,8 @@ tags: []
 Hooks 顾名思义，字面意义上来说就是 React 钩子的概念。通过一个 case 我们对 React Hooks 先有一个第一印象。
 
 假设现在要实现一个计数器的组件。如果使用组件化的方式，我们需要做的事情相对更多一些，比如说声明 state，编写计数器的方法等，而且需要理解的概念可能更多一些，比如 Javascript 的类的概念，this 上下文的指向等。
+
+<!-- more -->
 
 [示例](https://codepen.io/x-cold/pen/JqjZKR)
 ```jsx
@@ -511,6 +517,7 @@ function FunctionalComponent () {
 
 <a name="c4wq2"></a>
 #### state
+
 |  | class 组件 | 函数组件 |
 | --- | --- | --- |
 | 创建状态 | this.state = {} | useState, useReducer |
@@ -519,6 +526,7 @@ function FunctionalComponent () {
 | 状态管理 | 一个 state 集中式管理多个状态 | 多个 state，可以通过 useReducer 进行状态合并（手动） |
 | 性能 | 高 | 如果 useState 初始化状态需要通过非常复杂的计算得到，请使用函数的声明方式，否则每次渲染都会重复执行 |
 |  |  |  |
+
 
 
 <a name="Ygpro"></a>

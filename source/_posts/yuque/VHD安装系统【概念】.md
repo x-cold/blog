@@ -3,13 +3,18 @@
 
 title: VHD安装系统【概念】
 
+urlname: xp4ubp
+
 date: 2015-01-22 00:00:00 +0800
 
 tags: [计算机维护]
 
+categories: []
+
 ---
+
 <a name="ic0loc"></a>
-### [](#ic0loc)VHD简介
+### VHD简介
 
 ```
 VHD，全称 Virtual Hard Disk ，正如其中文翻译，即是虚拟硬盘[powered by微软]。
@@ -17,7 +22,7 @@ VHD，全称 Virtual Hard Disk ，正如其中文翻译，即是虚拟硬盘[pow
 ```
 
 <a name="8ks4ee"></a>
-### [](#8ks4ee)分类(win7下只有固定VHD和动态VHD两种)
+### 分类(win7下只有固定VHD和动态VHD两种)
 
 ```
 固定VHD：对已分配的大小不会更改。
@@ -29,7 +34,7 @@ VHD，全称 Virtual Hard Disk ，正如其中文翻译，即是虚拟硬盘[pow
 <!-- more -->
 
 <a name="8o3gle"></a>
-### [](#8o3gle)功能广泛
+### 功能广泛
 
 - 安装无盘操作系统，是公共场合（如网吧）非常适合使用这项技术。特点是维护方便，因为在虚拟硬盘的操作系统进行的操作几乎不会对计算机本身造成影响，而且这意味这客户端机子可以不需要配备硬盘而是直接通过NETBIOS等手段从服务器端进行引导。
 
@@ -39,7 +44,7 @@ VHD，全称 Virtual Hard Disk ，正如其中文翻译，即是虚拟硬盘[pow
 
 
 <a name="nvzubu"></a>
-### [](#nvzubu)安装系统
+### 安装系统
 
 - 可以采用传统的各种方式来安装操作系统，不过在这之前需要提前装载好磁盘。
 
@@ -49,7 +54,7 @@ VHD，全称 Virtual Hard Disk ，正如其中文翻译，即是虚拟硬盘[pow
 
 
 <a name="gc9qxq"></a>
-### [](#gc9qxq)管理工具DISKPART
+### 管理工具DISKPART
 
 ```bash
 >\ diskpart

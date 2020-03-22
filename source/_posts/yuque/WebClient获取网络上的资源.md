@@ -3,16 +3,20 @@
 
 title: WebClient获取网络上的资源
 
+urlname: ynbfpq
+
 date: 2015-02-15 00:00:00 +0800
 
 tags: [powershell]
+
+categories: []
 
 ---
 
 WebClient提供向了 URI 标识的资源发送数据和从 URI 标识的资源接收数据的公共方法.
 
 <a name="kczgdx"></a>
-### [](#kczgdx)下载网页内容
+### 下载网页内容
 
 1.创建WebClient对象：
 
@@ -34,7 +38,7 @@ $str
 ```
 
 <a name="0a7vym"></a>
-### [](#0a7vym)获取文件资源
+### 获取文件资源
 
 ```
 $url = "http://path.to/file"

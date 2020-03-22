@@ -3,18 +3,23 @@
 
 title: 一套Vue的单页模板：N3-admin
 
+urlname: iov5sg
+
 date: 2017-08-13 00:00:00 +0800
 
 tags: [javascript,vue,N3-components]
 
+categories: []
+
 ---
+
 趁着周末偷来一点闲，总结近期的工作和学习，想着该花点心思把N3-admin这套基于N3-components的单页应用模板简单的给介绍一下。
 
 > 项目路径: [https://github.com/N3-components/N3-admin](https://github.com/N3-components/N3-admin)<br />ps: 本项目不同于vue-admin等模板项目介绍大量的组件，基础组件的用法请参考：[https://n3-components.github.io/N3-components/](https://n3-components.github.io/N3-components/)
 
 
 <a name="o929fd"></a>
-## [](#o929fd)1、概述
+## 1、概述
 
 首先N3-admin是一个基于 vue / vuex / vue-router / N3 / axios 的单页应用，适用于单页应用的快速上手，并不仅限于N3-components的使用，而是提供一个**比较完善的项目构建的思路和结构**，提供给初学者学习。同时也是一套可扩展的Vue单页应用开发模板。
 
@@ -23,7 +28,7 @@ tags: [javascript,vue,N3-components]
 项目工程基于Vue-cli，因此大部分同学都能快速上手和理解，往下介绍一下特性和结构。
 
 <a name="rfs6co"></a>
-## [](#rfs6co)2、特性
+## 2、特性
 
 - [x] 项目工程相关
   - 开发环境；静态文件服务器、HTTP代理、热更新
@@ -76,7 +81,7 @@ tags: [javascript,vue,N3-components]
 
 
 <a name="ikq0zs"></a>
-## [](#ikq0zs)3、布局方式
+## 3、布局方式
 
 > 二级路由下生效
 
@@ -84,7 +89,7 @@ tags: [javascript,vue,N3-components]
 ![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530283697133-97fca5d9-8f9c-4b07-9e93-55e49b950117.png#width=747)
 
 <a name="6qzrsw"></a>
-## [](#6qzrsw)4、文件结构
+## 4、文件结构
 
 ```
 .
@@ -171,7 +176,7 @@ tags: [javascript,vue,N3-components]
 ```
 
 <a name="mgo0eg"></a>
-## [](#mgo0eg)5、使用说明
+## 5、使用说明
 
 - 开发环境
 
@@ -188,7 +193,7 @@ npm run build
 ```
 
 <a name="zkqutn"></a>
-## [](#zkqutn)6、效果图
+## 6、效果图
 
 - 总览
 

@@ -3,9 +3,13 @@
 
 title: Mac mini 2014 款拆解
 
+urlname: fxz0qy
+
 date: 2019-03-28 10:00:41 +0800
 
 tags: []
+
+categories: []
 
 ---
 最近入手了一款 Mac mini (Late 2014) 中配版本，主要用于 Work At Home 的一些需求，替换掉我原来的 Mac Mini (2011) 款。由于自带的 HDD 1TB 5400R 的硬盘的读写速度的限制，系统运行效率受到很大的制约，我选择升级到 SDD 以提高机器的性能。

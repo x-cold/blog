@@ -3,14 +3,18 @@
 
 title: 如何在HTML内包含模板文件
 
+urlname: yg79mz
+
 date: 2015-08-09 00:00:00 +0800
 
 tags: [html,javascript]
 
+categories: []
+
 ---
 
 <a name="1dtfnz"></a>
-## [](#1dtfnz)题记
+## 题记
 
 最近项目开发使用了全新的架构（RequireJS+AngularJS+IonicUI），类似的前端MVVM框架已经深入人心，因此也试着在项目之余写一点小代码实现部分功能。下面我们将用原生的Javascript实现一个在HTML内引入HTML文件的简单小组件。
 
@@ -21,7 +25,7 @@ tags: [html,javascript]
 _在后端的模板引擎内我们可以直接使用`include`类似的语句包含其他的模板，在一些SPA(Single Page APP)也是利用了类似于`ng-include`的写法复用HTML模板_
 
 <a name="onvkyr"></a>
-### [](#onvkyr)设计思路：
+### 设计思路：
 
 - HTML标签：添加`include-html`属性，用于置入引用的HTML模板的URL
 
@@ -101,7 +105,7 @@ var loadHTML = function(method, url, async, callback) {
 这里还需要进行算法优化，借着午后小憩的时间暂且先完成此DEMO，后继完善。
 
 <a name="551zyg"></a>
-### [](#551zyg)完整DEMO
+### 完整DEMO
 
 1. index.html
 

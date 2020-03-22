@@ -3,15 +3,20 @@
 
 title: Javascript之window对象
 
+urlname: gh8736
+
 date: 2015-03-01 00:00:00 +0800
 
 tags: [javascript]
 
+categories: []
+
 ---
+
 说到window对象我们不得不提及BOM，BOM是browser object model的缩写，正如其名为浏览器对象模型。BOM提供了独立于内容而与浏览器窗口进行交互的对象，BOM由一系列相关的对象组成，其中最主要对象为window，下面我们将分类讲解window对象。
 
 <a name="i5qgoi"></a>
-### [](#i5qgoi)概述
+### 概述
 
 window对象是BOM顶层(核心对象)，其他对象均为window对象延伸拓展，成为其子对象。直接调用其子对象可以不指明window对象，其子对象或者函数的作用域为全局（我们可以在局部的作用域定义window.variable将变量提升为全局变量）。接下来我们将从其子对象和函数两方面刨析。
 
@@ -25,7 +30,7 @@ window.navigator === navigator;
 ```
 
 <a name="3ibpel"></a>
-### [](#3ibpel)self对象
+### self对象
 
 self对象与window对象完全一致，self通常用于确认在当前窗口内。
 
@@ -37,7 +42,7 @@ self.self === self;
 ```
 
 <a name="h3rstg"></a>
-### [](#h3rstg)子对象(下面对于子对象函数的描述均省略显示使用window对象)
+### 子对象(下面对于子对象函数的描述均省略显示使用window对象)
 
 ![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282924354-52404bad-0b55-42bf-b181-09641b534884.png#width=525)
 
@@ -113,7 +118,7 @@ Screen 对象中存放着有关显示浏览器屏幕的信息。JavaScript 程�
 函数 | 描述<br />back() | 后退(history列表上一个URL)<br />forward() | 前进(history列表下一个URL)<br />go() | 加载history列表中某个一个URL<br />6、window.document
 
 <a name="14gbaw"></a>
-### [](#14gbaw)函数
+### 函数
 
 1、窗体控制函数
 
@@ -207,7 +212,7 @@ string !== null ? console.log('学号是' + string) : console.log('您点击了�
 
 
 <a name="bz4aqn"></a>
-### [](#bz4aqn)其他属性
+### 其他属性
 
 1、状态栏属性
 
@@ -252,7 +257,7 @@ _只读整数。声明了窗口的左上角在屏幕上的的 x 坐标和 y 坐�
 
 
 <a name="diclku"></a>
-### [](#diclku)事件
+### 事件
 
 另开一篇文章详述javascript的事件，关于window的事件不再重复赘述。
 

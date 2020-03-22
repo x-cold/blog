@@ -3,13 +3,18 @@
 
 title: powershell测试服务器请求时间
 
+urlname: yxbpzt
+
 date: 2015-02-12 00:00:00 +0800
 
 tags: [powershell]
 
+categories: []
+
 ---
+
 <a name="roedeh"></a>
-### [](#roedeh)1、使用基本的cmdlet
+### 1、使用基本的cmdlet
 
 - Invoke-WebRequest进行HTTP请求测试
 
@@ -29,7 +34,7 @@ PS > Measure-Command -Expression {Invoke-WebRequest -Uri "http://www.baidu.com"}
 ```
 
 <a name="o0gfrv"></a>
-### [](#o0gfrv)2、源代码：
+### 2、源代码：
 
 ```powershell
 $url = "http://www.baidu.com"
@@ -47,7 +52,7 @@ Write-Host "It took $milliseconds ms!"
 ```
 
 <a name="nokahz"></a>
-### [](#nokahz)3、小结
+### 3、小结
 
 PowerShell获取网页信息个人建议的三种解决方案：
 

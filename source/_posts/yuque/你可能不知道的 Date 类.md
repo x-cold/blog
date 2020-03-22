@@ -3,7 +3,11 @@
 
 title: 你可能不知道的 Date 类
 
+urlname: bo4na0
+
 date: 2017-12-17 00:00:00 +0800
+
+categories: [[javascript,date]]
 
 tags: [javascript,时间处理]
 
@@ -12,7 +16,7 @@ tags: [javascript,时间处理]
 Date 是 JS 中的重要的一个内置对象，其实例主要用于处理时间和日期，其时间基于 1970-1-1 (世界标准时间)起的毫秒数，时间戳长度为 13 位（不同于 Unix 时间戳的长度 10 位）。对于日期和时间，我们有无数个使用场景，因此需要特别注意一些细节和约定。
 
 <a name="bw68yn"></a>
-### [](#bw68yn)1. 构造函数
+### 1. 构造函数
 
 通过 new Date() 可以进行实例化，得到一个 Date 对象实例，值得注意的是如果直接执行 `Date()` ，将得到一个时间字符串。
 
@@ -41,7 +45,7 @@ new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
 
 
 <a name="iw21ng"></a>
-### [](#iw21ng)2. 空值处理
+### 2. 空值处理
 
 ```javascript
 // 以chrome为例
@@ -65,7 +69,7 @@ new Date(undefined);
 ```
 
 <a name="4i55ic"></a>
-### [](#4i55ic)3. 特别提示
+### 3. 特别提示
 
 [Firefox]
 
@@ -77,7 +81,7 @@ new Date(undefined);
 
 
 <a name="tfq1kl"></a>
-### [](#tfq1kl)4. 值的边界
+### 4. 值的边界
 
 不同执行环境下的边界值有差异， Chrome 下甚至连负值都能支持。在实际生产环境中，不仅需要考虑时间的展示，还需要考虑其存储、计算等，因此在特定的场景下，我们需要尽可能考虑到数据库和浏览器中 Date 的有效范围。
 
@@ -96,7 +100,7 @@ new Date(undefined);
 在 `mysql` 中，其范围定义为 `1000-01-01`to`9999-12-31`；<br />在 `js` 中，时间戳的最小值为 `-8640000000000000` 即公元前 271,821 年 4 月 20 日，最大值为 `8640000000000000`，即 275,760 年 9 月 13 日。规范中时间范围为 1970/1/1 前后 `100,000,000` 天。
 
 <a name="316knr"></a>
-### [](#316knr)5. 2038 年虫
+### 5. 2038 年虫
 
 听说，2038 年之后时间戳不够用了。
 
@@ -106,12 +110,12 @@ new Date(undefined);
 实际上参考第 4 部分，Date 的上限绰绰有余，大家可以拿起手头的设备测试一下 2038 年会出现怎样的异状。
 
 <a name="rgszhm"></a>
-### [](#rgszhm)6. 参考
+### 6. 参考
 
 1、EmacScript 语言规范 - [http://ecma-international.org/ecma-262/5.1/#sec-15.9](http://ecma-international.org/ecma-262/5.1/#sec-15.9)<br />2、Mysql 时间范围 - [https://dev.mysql.com/doc/refman/5.5/en/datetime.html](https://dev.mysql.com/doc/refman/5.5/en/datetime.html)<br />3、JS 时间戳边界 - [https://stackoverflow.com/questions/11526504/minimum-and-maximum-date](https://stackoverflow.com/questions/11526504/minimum-and-maximum-date)
 
 <a name="kkpnsm"></a>
-### [](#kkpnsm)7. 库
+### 7. 库
 
 - [moment](https://github.com/moment/moment) - 重量级时间处理库，支持时间解析、格式化、计算等，功能强大，支持浏览器和 Node.js，压缩后体积约为 16.3 KB
 

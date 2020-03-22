@@ -3,14 +3,18 @@
 
 title: CSS优先级
 
+urlname: qgvhqy
+
 date: 2015-04-18 00:00:00 +0800
 
 tags: [css]
 
+categories: []
+
 ---
 
 <a name="t0ngis"></a>
-## [](#t0ngis)优先级排序
+## 优先级排序
 
 - [1位重要标志位] > [4位特殊性标志] > 声明先后顺序
 

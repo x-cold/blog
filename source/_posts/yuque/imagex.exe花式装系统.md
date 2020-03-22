@@ -3,21 +3,25 @@
 
 title: imagex.exe花式装系统
 
+urlname: gud1gc
+
 date: 2015-01-20 00:00:00 +0800
 
 tags: [计算机维护]
 
+categories: []
+
 ---
 
 <a name="wqiyvt"></a>
-### [](#wqiyvt)imagex.exe简介
+### imagex.exe简介
 
 imagex.exe是一款用来捕获、修改和应用基于文件的磁盘映像以进行快速部署。ImageX可以使用 Windows 映像 (.wim) 文件复制到网络，或者还可以使用其他利用 .wim 映像的技术，如 Windows 安装程序、Windows 部署服务 (Windows DS) 以及系统管理服务器 (SMS) 操作系统功能部署包。
 
 <!-- more -->
 
 <a name="ughyat"></a>
-### [](#ughyat)帮助文档
+### 帮助文档
 
 ```bash
 \> imagex /help		#查看帮助文档
@@ -58,7 +62,7 @@ All operations accept the following flags:
 ```
 
 <a name="srozaf"></a>
-### [](#srozaf)安装系统需要使用的命令(这里采用wim镜像安装系统)
+### 安装系统需要使用的命令(这里采用wim镜像安装系统)
 
 - 检测wim镜像的完整性，并获取到wim镜像的系统版本系统：
 
@@ -163,7 +167,7 @@ Available Image Choices:
 ```
 
 <a name="r7u2cu"></a>
-### [](#r7u2cu)小结
+### 小结
 
 1. imagex工具备份和还原的速度快，体积非常小。
 

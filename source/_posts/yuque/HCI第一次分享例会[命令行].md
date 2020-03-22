@@ -3,16 +3,20 @@
 
 title: HCI第一次分享例会[命令行]
 
+urlname: chomfq
+
 date: 2015-10-25 00:00:00 +0800
 
 tags: [cmd,linux,hci]
+
+categories: []
 
 ---
 
 欢迎来访HCI第一次例会分享，今天小编（HCI-鹏飞）需要分享的是linux和windows命令行的基本命令以及技巧。
 
 <a name="bovtlm"></a>
-### [](#bovtlm)关于linux知多少
+### 关于linux知多少
 
 概要：开源、多用户多任务、支持多线程多CPU的操作系统（基于POSIX和UNIX），以网络为核心而设计，可以运行UNIX工具、应用程序和网络协议。Linux内核版本已经升级到4.3。(内核源代码Git仓库：[https://git.kernel.org/](https://git.kernel.org/))。<br />特性：强大的控制台和Linux终端环境以及桌面环境如GNOME, KDE, XFCE和 LXDE，稳定性高安全性较高。
 
@@ -23,7 +27,7 @@ tags: [cmd,linux,hci]
 ![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282614096-ab87ccb8-d840-4f46-8e0b-d854f6f28999.png#width=442)
 
 <a name="np1gov"></a>
-### [](#np1gov)言归正传，下面开始进入正题。开始讲解linux(局部windows的命令行)
+### 言归正传，下面开始进入正题。开始讲解linux(局部windows的命令行)
 
 - 用户管理
 

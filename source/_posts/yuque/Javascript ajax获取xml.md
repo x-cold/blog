@@ -3,13 +3,18 @@
 
 title: Javascript ajax获取xml
 
+urlname: ki4660
+
 date: 2015-02-12 00:00:00 +0800
 
 tags: [javascript,xml]
 
+categories: []
+
 ---
+
 <a name="drxfnz"></a>
-### [](#drxfnz)ajax简介
+### ajax简介
 
 - AJAX = 异步 JavaScript 和 XML
 
@@ -21,7 +26,7 @@ tags: [javascript,xml]
 <!-- more -->
 
 <a name="lucpnp"></a>
-### [](#lucpnp)ajax操作xml可以快速建立轻量级的动态网站,下面是实例：
+### ajax操作xml可以快速建立轻量级的动态网站,下面是实例：
 
 [查看demo](http://7u2liq.com1.z0.glb.clouddn.com/blog/demo/ajax/html/)
 

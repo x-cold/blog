@@ -3,16 +3,20 @@
 
 title: Nginx虚拟主机管理系统 [HCI趣玩-2016年预热]
 
+urlname: ifxd94
+
 date: 2015-12-31 00:00:00 +0800
 
 tags: [linux,hci,nginx]
+
+categories: []
 
 ---
 
 欢迎来访HCI第一次趣玩作业，本次作业主要是完成简易的ningx虚拟主机管理系统。所涉及的知识涵盖linux的基本管理命令、nginx/ftp服务器配置、简单的前端页面处理和后台逻辑。
 
 <a name="iftvmh"></a>
-### [](#iftvmh)Nginx知多少
+### Nginx知多少
 
 Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。由俄罗斯的程序设计师Igor Sysoev所开发，供俄国大型的入口网站及搜索引擎Rambler（俄文：Рамблер）使用。其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、新浪、网易、腾讯等。【摘抄自百度百科】
 
@@ -24,7 +28,7 @@ Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（I
 
 
 <a name="yhetnf"></a>
-### [](#yhetnf)前言
+### 前言
 
 - 体验传送门(新浪云)：[http://sinaapp.com/](http://sinaapp.com/)
 
@@ -32,7 +36,7 @@ Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（I
 
 
 <a name="cuzpga"></a>
-### [](#cuzpga)设计目标
+### 设计目标
 
 - 一个可用的虚拟主机管理系统，可以添加/删除/修改/查看多个虚拟主机（只需支持静态文件服务器），同时生成一个账户（账号名+密码）对该主机进行管理。
 
@@ -42,7 +46,7 @@ Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（I
 
 
 <a name="4vtcxf"></a>
-### [](#4vtcxf)举个栗子
+### 举个栗子
 
 以下介绍的服务器为HCI内部服务器，运行着HCI的官方网站、竞考网微信公众号后台、weinre调试服务器等应用，所有应用使用不同的域名和同一个套接字（IP+端口）。下面我们来简单分析nginx的配置文件。
 
@@ -216,7 +220,7 @@ index index.html;
 运行在`http://weinre.scauhci.com/`和`http://121.201.58.180:80`上，项目文件路径为/var/www/test，假设此文件夹只能由FTP账户（账号名: hci1，密码：hci1_pass）使用ftp对`ftp://www.scauhci.com/test/`进行读写。
 
 <a name="nmq5wr"></a>
-### [](#nmq5wr)设计思路和流程
+### 设计思路和流程
 
 1. 熟悉Linux环境和Nginx的配置(需部分成员了解)
 
@@ -230,7 +234,7 @@ index index.html;
 ![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282751584-bab5ba04-1af0-484d-bd72-f0d54ae130d7.png#width=677)
 
 <a name="iccxea"></a>
-### [](#iccxea)写几个可能遇到的问题
+### 写几个可能遇到的问题
 
 1. 文件权限的问题：每个应用对应的路径（文件夹）是相对独立的，且只能由对应的用户进行读写
 
@@ -242,7 +246,7 @@ index index.html;
 
 
 <a name="l7mrdw"></a>
-### [](#l7mrdw)技能列表
+### 技能列表
 
 - [Linux入门知识](https://www.shiyanlou.com/courses/1)
 
@@ -260,7 +264,7 @@ index index.html;
 
 
 <a name="nkddns"></a>
-### [](#nkddns)成果：
+### 成果：
 
 - 可展示和使用的虚拟主机管理系统
 
@@ -268,7 +272,7 @@ index index.html;
 
 
 <a name="k5k5hn"></a>
-### [](#k5k5hn)后话
+### 后话
 
 本作业难度适中，但涉及的分支非常丰富，适于团队合作，期望各位能涉及多方面的技术，另外需要对项目有大局的思考方式。建议3-5人一组，可挑选一名13级的师兄/师姐作为指导。有任何问题可直接在`HCI@上有老下有小群`讨论。也可以在本文后面的评论框直接评论。
 

@@ -3,9 +3,13 @@
 
 title: Git 实用指南
 
+urlname: lfmcil
+
 date: 2019-03-28 00:00:00 +0800
 
 tags: [git]
+
+categories: []
 
 ---
 

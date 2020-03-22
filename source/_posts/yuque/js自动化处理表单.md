@@ -3,22 +3,27 @@
 
 title: js自动化处理表单
 
+urlname: wn7wdo
+
 date: 2015-01-07 00:00:00 +0800
 
 tags: [javascript,自动化]
 
+categories: []
+
 ---
+
 我们在浏览网页时偶尔会碰到一些需要重复选择各种选项的尴尬局面，我们希望可以有一种工具可以帮助我们自动完成填表或者选择选卡项目。
 
 <a name="ane9es"></a>
-### [](#ane9es)实现原理
+### 实现原理
 
 调用浏览器的控制台运行js脚本，从而达到自动填写表单和选择勾选项，以及自动提交等功能。
 
 <!-- more -->
 
 <a name="wccbgv"></a>
-### [](#wccbgv)实现方法（例子）
+### 实现方法（例子）
 
 - 获取到表单元素，首先需要浏览到你需要操作的网页，通过浏览器的审查元素或者查看源代码可以获取到按钮/选项/输入框在文档中的位置。
 
@@ -53,7 +58,7 @@ btn.click();
 ```
 
 <a name="veydur"></a>
-### [](#veydur)小结
+### 小结
 
 - 需要对html有基本的了解，才能快速地通过审查元素找到需要操作的DOM对象
 
@@ -104,7 +109,7 @@ var frame = window.frames["zhuti"].document.getElementById('divJs');
 [查看demo](http://7u2liq.com1.z0.glb.clouddn.com/blog/demo/js自动处理表单/)
 
 <a name="v540ts"></a>
-### [](#v540ts)demo源代码
+### demo源代码
 
 ```html
 <!DOCTYPE html>
