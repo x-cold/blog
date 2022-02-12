@@ -1,36 +1,30 @@
-
 ---
-
-title: HCI第一次分享例会[命令行]
-
+title: 'HCI第一次分享例会[命令行]'
 urlname: chomfq
-
-date: 2015-10-25 00:00:00 +0800
-
-tags: [cmd,linux,hci]
-
+date: '2015-10-25 00:00:00 +0800'
+tags:
+  - cmd
+  - linux
+  - hci
 categories: []
-
 ---
 
-欢迎来访HCI第一次例会分享，今天小编（HCI-鹏飞）需要分享的是linux和windows命令行的基本命令以及技巧。
+欢迎来访 HCI 第一次例会分享，今天小编（HCI-鹏飞）需要分享的是 linux 和 windows 命令行的基本命令以及技巧。
 
-<a name="bovtlm"></a>
-### 关于linux知多少
+### 关于 linux 知多少
 
-概要：开源、多用户多任务、支持多线程多CPU的操作系统（基于POSIX和UNIX），以网络为核心而设计，可以运行UNIX工具、应用程序和网络协议。Linux内核版本已经升级到4.3。(内核源代码Git仓库：[https://git.kernel.org/](https://git.kernel.org/))。<br />特性：强大的控制台和Linux终端环境以及桌面环境如GNOME, KDE, XFCE和 LXDE，稳定性高安全性较高。
+概要：开源、多用户多任务、支持多线程多 CPU 的操作系统（基于 POSIX 和 UNIX），以网络为核心而设计，可以运行 UNIX 工具、应用程序和网络协议。Linux 内核版本已经升级到 4.3。(内核源代码 Git 仓库：[https://git.kernel.org/](https://git.kernel.org/))。
+特性：强大的控制台和 Linux 终端环境以及桌面环境如 GNOME, KDE, XFCE 和 LXDE，稳定性高安全性较高。
 
 <!-- more -->
 
-应用场景：<br />
+应用场景：
 
 ![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282614096-ab87ccb8-d840-4f46-8e0b-d854f6f28999.png#width=442)
 
-<a name="np1gov"></a>
-### 言归正传，下面开始进入正题。开始讲解linux(局部windows的命令行)
+### 言归正传，下面开始进入正题。开始讲解 linux(局部 windows 的命令行)
 
 - 用户管理
-
 
 ```bash
 查看当前登录的用户名：who am i \ who mom likes
@@ -43,15 +37,14 @@ categories: []
 
 - 文件管理
 
-
 > 文件权限：
-
 
 ```bash
 查看文件权限：ls -l
 ```
 
-![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282638549-5e6ff30a-676f-4162-a8af-fb1b07a735cc.png#width=747)<br />![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282646577-acd64bd4-6eaa-41dc-a9e4-5c4627293458.png#width=528)
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282638549-5e6ff30a-676f-4162-a8af-fb1b07a735cc.png#width=747)
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282646577-acd64bd4-6eaa-41dc-a9e4-5c4627293458.png#width=528)
 
 ```bash
 更改所有者：chown
@@ -60,10 +53,11 @@ chmod go-rw hci
 # 'g''o'还有'u'，分别表示group，others，user，'+'，'-' 就分别表示增加和去掉相应的权限
 ```
 
-![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282661213-c3bd0152-16ce-4546-9a6c-4a0b1cb83833.png#width=747)<br />
-[ps: 三组权限：拥有者、所属用户组、其他用户]
-> 操作文件：
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282661213-c3bd0152-16ce-4546-9a6c-4a0b1cb83833.png#width=747)
 
+[ps: 三组权限：拥有者、所属用户组、其他用户]
+
+> 操作文件：
 
 ```bash
 切换目录：cd\pushd
@@ -80,10 +74,11 @@ chmod go-rw hci
 查看文件类型：file
 ```
 
-- 文本处理<br />主要工具vi\vim：屏幕编辑和行编辑模式
+- 文本处理
+  主要工具 vi\vim：屏幕编辑和行编辑模式
 
-- 环境变量<br />运行环境的变量。
-
+- 环境变量
+  运行环境的变量。
 
 ```bash
 定义变量：declare
@@ -94,7 +89,6 @@ chmod go-rw hci
 ```
 
 - 其他技巧
-
 
 ```bash
 回显筛选：grep
@@ -108,5 +102,3 @@ chmod go-rw hci
 挂载文件系统：mount\unmount
 帮助文档：man\info
 ```
-
-

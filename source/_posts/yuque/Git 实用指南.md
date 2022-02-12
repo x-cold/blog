@@ -1,22 +1,14 @@
-
 ---
-
 title: Git 实用指南
-
 urlname: lfmcil
-
-date: 2019-03-28 00:00:00 +0800
-
-tags: [git]
-
+date: '2019-03-28 00:00:00 +0800'
+tags:
+  - git
 categories: []
-
 ---
-
 
 个人整理的一些常用的 Git 概念和命令集合，方便速查和快速解决某些场景下的问题，覆盖了日常开发和协同工作下的一部分场景，不只是命令行的介绍。欢迎关注[语雀原文](https://www.yuque.com/yinzhi/blog/lfmcil)，持续更新！
 
-<a name="0b133c66"></a>
 ## 精简入门
 
 1、克隆仓库
@@ -61,7 +53,7 @@ git commit -m "feat: support canvas"
 # 修改当前的 commit message
 git commit --amend
 # 重置当前的 commit author 和 message
-git commit --amend --reset-author 
+git commit --amend --reset-author
 ```
 
 4、推送代码到远程仓库
@@ -77,10 +69,10 @@ git push origin master
 git push origin master:dev
 ```
 
-<a name="af75a264"></a>
 ## 聊聊设计
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1553735304999-5c646d62-6d36-45d9-9ae1-ffdf4b5d6e67.png#align=left&display=inline&height=837&name=image.png&originHeight=837&originWidth=1024&size=67634&status=done&width=1024)<br />图像来自维基百科
+![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1553735304999-5c646d62-6d36-45d9-9ae1-ffdf4b5d6e67.png#align=left&display=inline&height=837&margin=%5Bobject%20Object%5D&name=image.png&originHeight=837&originWidth=1024&size=67634&status=done&style=none&width=1024)
+图像来自维基百科
 
 Git 是一个分布式的版本控制工具，因此远程和本地可以视为两个独立的 Git 仓库。上图是一张经典的 Git 中的数据流与存储级别的介绍，其中储存级别主要包含几部分：
 
@@ -91,9 +83,8 @@ Git 是一个分布式的版本控制工具，因此远程和本地可以视为�
 
 由此不难看出整体的数据流动，就是一条从：工作区 -> 暂存区 -> 本地仓库 -> 远程仓库 的双向数据流通道。
 
-<a name="0dfbe902"></a>
 ## 常用命令
-<a name="04900ddb"></a>
+
 ### git init
 
 创建一个空白的 git 仓库
@@ -102,21 +93,18 @@ Git 是一个分布式的版本控制工具，因此远程和本地可以视为�
 git init
 ```
 
-<a name="73e58b95"></a>
 ### git add
 
 ```bash
 git add [<options>] [--] <pathspec>...
 ```
 
-<a name="5f9e613a"></a>
 ### git commit
 
 ```bash
 git commit [<options>] [--] <pathspec>...
 ```
 
-<a name="da5508cb"></a>
 ### git remote
 
 remote 指的是本地的 git 仓库关联的远程 git 仓库。
@@ -154,7 +142,6 @@ git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<
 git remote origin git@github.com:x-cold/git-learning.git
 ```
 
-<a name="57bbe662"></a>
 ### git branch
 
 1、列出本地存在的分支
@@ -225,7 +212,6 @@ git branch --set-upstream <localBranch> <remote>/<remoteBranch>
 git branch --set-upstream dev origin/dev
 ```
 
-<a name="386668d1"></a>
 ### git checkout
 
 检出分支:
@@ -241,13 +227,14 @@ git checkout dev
 git checkout -b test
 ```
 
-除开用于分支切换，checkout 还可以用于恢复**未添加到本地工作区，但是被修改过的文件。**<br />**
+除开用于分支切换，checkout 还可以用于恢复**未添加到本地工作区，但是被修改过的文件。**
+\*\*
+
 ```bash
 # 将 index.js 恢复到当前 commit 的内容
 git checkout index.js
 ```
 
-<a name="89b6da3d"></a>
 ### git merge
 
 合并分支:
@@ -261,24 +248,22 @@ git merge [<options>] [<commit>...]
 git merge origin/master
 ```
 
-<a name="5c874c8c"></a>
 ### git rebase
 
 变基，是一种常用且有风险的操作，会改变提交历史，谨慎使用！
 
 ```bash
-git rebase 
+git rebase
 while(存在冲突) {
     git status
     找到当前冲突文件，编辑解决冲突
     git add -u
     git rebase --continue
     if( git rebase --abort )
-        break; 
+        break;
 }
 ```
 
-<a name="b8180c6e"></a>
 ### git cherry-pick
 
 魔法级的命令，cherry-pick 可以提取 N 个的提交记录，合入稳定版本的分支上。
@@ -294,7 +279,6 @@ git cherry-pick 371c2
 git cherry-pick 371c2…971209
 ```
 
-<a name="0380e71d"></a>
 ### git push
 
 推送到远程仓库，同步本地仓库的提交历史到远程仓库
@@ -314,7 +298,6 @@ git push origin publish/1.0.0
 git push origin --tags
 ```
 
-<a name="6f808f5a"></a>
 ### git pull
 
 拉取远程分支，同步远程仓库的提交历史到本地仓库
@@ -333,7 +316,6 @@ git pull origin master
 git pull --rebase origin master
 ```
 
-<a name="2968dbdd"></a>
 ### git tag
 
 1、创建 tag
@@ -366,28 +348,24 @@ git tag -d v1.0.0
 git push origin :refs/tags/v1.0.0
 ```
 
-<a name="d1595401"></a>
 ## .git 仓库元数据
 
 每一个 git 的代码仓库目录下，都会有一个 `.git` 的文件夹，其中包含的重要文件包含以下：
 
-| 文件/文件夹 | 含义 |  |
-| --- | --- | --- |
-| config* | 配置文件 |  |
-| description | 描述，仅供 Git Web 程序使用 |  |
-| HEAD | 当前被检出的分支 |  |
-| index | 暂存区信息 |  |
-| hooks/ | 客户端或服务端的钩子脚本（hook scripts） |  |
-| info/ | 全局性排除（global exclude）文件，不希望被记录在 .gitignore 文件中的忽略模式（ignored patterns） |  |
-| objects/ | 所有数据内容 |  |
-| refs/ | 数据（分支）的提交对象的指针 |  |
-|  |  |  |
+| 文件/文件夹 | 含义                                                                                             |     |
+| ----------- | ------------------------------------------------------------------------------------------------ | --- |
+| config\*    | 配置文件                                                                                         |     |
+| description | 描述，仅供 Git Web 程序使用                                                                      |     |
+| HEAD        | 当前被检出的分支                                                                                 |     |
+| index       | 暂存区信息                                                                                       |     |
+| hooks/      | 客户端或服务端的钩子脚本（hook scripts）                                                         |     |
+| info/       | 全局性排除（global exclude）文件，不希望被记录在 .gitignore 文件中的忽略模式（ignored patterns） |     |
+| objects/    | 所有数据内容                                                                                     |     |
+| refs/       | 数据（分支）的提交对象的指针                                                                     |     |
+|             |                                                                                                  |     |
 
-
-<a name="7c99e281"></a>
 ## 进阶技巧
 
-<a name="d653f1cb"></a>
 ### 修改 commit 历史
 
 使用 git rebase 进行历史修改，假定修改最近 3 条历史，操作步骤如下：
@@ -400,6 +378,7 @@ git push origin :refs/tags/v1.0.0
 pick f7f3f6d changed my name a bit
 pick 310154e updated README formatting and added blame
 pick a5f4a0d added cat-file
+pick a5f412a0d added cat-file1
 
 # Rebase 710f0f8..a5f4a0d onto 710f0f8
 #
@@ -411,20 +390,20 @@ pick a5f4a0d added cat-file
 # If you remove a line here THAT COMMIT WILL BE LOST.
 # However, if you remove everything, the rebase will be aborted.
 #
+
+:2, 4 s/pick/s/g
 ```
 
 2、编辑上述列表文件，在需要更改的 commit 前，将 `pick` 修改为 `edit` ，如果需要压缩，可设置为 `squash` 保存退出，进入到 rebase 流程；
 
 3、通过 `git commit --amend --author` 对历史记录依次修改和持续进行 rebase；
 
-<a name="b65fd098"></a>
 ### 添加指定文件
 
 ```bash
 git ls-files src/ | grep '\.css$' | xargs git add
 ```
 
-<a name="160944bd"></a>
 ### 删除所有 commit 中的某些文件
 
 ```bash
@@ -435,7 +414,6 @@ git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch -r bu
 git reflog expire --expire=now --all && git gc --prune=now --aggressive
 ```
 
-<a name="5317a015"></a>
 ### git stash
 
 使用 stash 可以将当工作区更改的临时存放起来，等一番 git 操作（比如 merge / rebase 等）之后，再将这部分更改重新放回工作区。
@@ -447,7 +425,6 @@ git stash
 git stash pop
 ```
 
-<a name="2e307a62"></a>
 ## 附录
 
 - [githug](https://github.com/Gazler/githug), 一个专门为 git 学习路径设计的游戏
@@ -458,18 +435,10 @@ git stash pop
 
 - [lazygit](https://github.com/jesseduffield/lazygit), 懒人专用的 git 命令行程序
 
-
-<a name="d64d6855"></a>
 ## 其他用途
 
-<a name="2d3ad16e"></a>
 ### issue 评论
 
 - [gitment](https://github.com/imsun/gitment), github issue 社会化评论插件
 
 - [gittalk](https://github.com/gitalk/gitalk), github issue 社会化评论插件，感觉稍微好看一点点
-
-
-
-
-

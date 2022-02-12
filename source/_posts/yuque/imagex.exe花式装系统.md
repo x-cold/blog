@@ -1,26 +1,18 @@
-
 ---
-
 title: imagex.exe花式装系统
-
 urlname: gud1gc
-
-date: 2015-01-20 00:00:00 +0800
-
-tags: [计算机维护]
-
+date: '2015-01-20 00:00:00 +0800'
+tags:
+  - 计算机维护
 categories: []
-
 ---
 
-<a name="wqiyvt"></a>
-### imagex.exe简介
+### imagex.exe 简介
 
-imagex.exe是一款用来捕获、修改和应用基于文件的磁盘映像以进行快速部署。ImageX可以使用 Windows 映像 (.wim) 文件复制到网络，或者还可以使用其他利用 .wim 映像的技术，如 Windows 安装程序、Windows 部署服务 (Windows DS) 以及系统管理服务器 (SMS) 操作系统功能部署包。
+imagex.exe 是一款用来捕获、修改和应用基于文件的磁盘映像以进行快速部署。ImageX 可以使用 Windows 映像 (.wim) 文件复制到网络，或者还可以使用其他利用 .wim 映像的技术，如 Windows 安装程序、Windows 部署服务 (Windows DS) 以及系统管理服务器 (SMS) 操作系统功能部署包。
 
 <!-- more -->
 
-<a name="ughyat"></a>
 ### 帮助文档
 
 ```bash
@@ -61,11 +53,9 @@ All operations accept the following flags:
 \>
 ```
 
-<a name="srozaf"></a>
-### 安装系统需要使用的命令(这里采用wim镜像安装系统)
+### 安装系统需要使用的命令(这里采用 wim 镜像安装系统)
 
-- 检测wim镜像的完整性，并获取到wim镜像的系统版本系统：
-
+- 检测 wim 镜像的完整性，并获取到 wim 镜像的系统版本系统：
 
 ```bash
 > imagex /info install.wim		#查看"install.wim"的相关信息
@@ -142,10 +132,9 @@ Available Image Choices:
 \>
 ```
 
-- Image Count 即是该镜像包含的的系统各版本的计数，如旗舰版、专业版等。我们需要在后面的XML里面找到自己需要安装的系统版本对应的Count记录下来。
+- Image Count 即是该镜像包含的的系统各版本的计数，如旗舰版、专业版等。我们需要在后面的 XML 里面找到自己需要安装的系统版本对应的 Count 记录下来。
 
-- 解压install.wim镜像内的系统文件到对应的路径，既是完成安装系统文件的过程。
-
+- 解压 install.wim 镜像内的系统文件到对应的路径，既是完成安装系统文件的过程。
 
 ```bash
 \> imagex /apply install.wim 1 c:	#其中数字"1"就是刚刚记录下的Count
@@ -153,27 +142,21 @@ Available Image Choices:
 
 - 备份系统同样也能完成：
 
-
 ```bash
 #增量备份，即在“windows.wim”里添加子映像
 \> imagex /append C: D:\windows.wim "windows(2)"
 ```
 
-- 完成了以上工作，基本的操作系统文件已经完成了复制过程，接下来我们则需要给新装的系统添加引导。只需要一条简单的命令，当然你也可以通过easybcd等工具来完成此过程。
-
+- 完成了以上工作，基本的操作系统文件已经完成了复制过程，接下来我们则需要给新装的系统添加引导。只需要一条简单的命令，当然你也可以通过 easybcd 等工具来完成此过程。
 
 ```bash
 \> bcdboot c:\windows
 ```
 
-<a name="r7u2cu"></a>
 ### 小结
 
-1. imagex工具备份和还原的速度快，体积非常小。
+1. imagex 工具备份和还原的速度快，体积非常小。
 
-2. imagex工具在命令行下的语法多样，可以进行各种灵活的操作。
+2. imagex 工具在命令行下的语法多样，可以进行各种灵活的操作。
 
-3. 使用此方法非常适合直接在常用的操作系统上安装第二操作系统，并且速度十分可观，配合VHD安装多系统更是巧妙。
-
-
-
+3. 使用此方法非常适合直接在常用的操作系统上安装第二操作系统，并且速度十分可观，配合 VHD 安装多系统更是巧妙。

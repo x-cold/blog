@@ -1,34 +1,25 @@
-
 ---
-
 title: powershell学习之道-文件夹共享及磁盘映射
-
 urlname: qeqnq1
-
-date: 2015-01-19 00:00:00 +0800
-
-tags: [powershell]
-
+date: '2015-01-19 00:00:00 +0800'
+tags:
+  - powershell
 categories: []
-
 ---
 
-在Linux环境下，我们很轻易就能得心应手地通过命令操作一切事物，在Windows下，Powershell也算是后起之秀，提供大量的cmdlet以及c#的横向拓展。下面将由小编带领大家通过Powershell实现文件夹共享，当然文中也不会冷落cmd这枚老将。
+在 Linux 环境下，我们很轻易就能得心应手地通过命令操作一切事物，在 Windows 下，Powershell 也算是后起之秀，提供大量的 cmdlet 以及 c#的横向拓展。下面将由小编带领大家通过 Powershell 实现文件夹共享，当然文中也不会冷落 cmd 这枚老将。
 
-<a name="7a29ll"></a>
 ### 文件夹共享概述
 
-共享文件夹的应用非常广泛，客户端对服务器端进行文件管理，局域网文件直传等等，在linux下，可以简单的安装smaba协议，简单的配置之后即可使用。在windows下，可以通过图形化的操作开启这项功能，当然带着一点极客风格，我们通过powershell（少量出现cmd）来对其进行管理。
+共享文件夹的应用非常广泛，客户端对服务器端进行文件管理，局域网文件直传等等，在 linux 下，可以简单的安装 smaba 协议，简单的配置之后即可使用。在 windows 下，可以通过图形化的操作开启这项功能，当然带着一点极客风格，我们通过 powershell（少量出现 cmd）来对其进行管理。
 
 <!-- more -->
 
-<a name="qbcvan"></a>
 ### 操作步骤
 
-<a name="8q9yga"></a>
 #### 查看共享列表
 
-在powershell内，我们可以通过执行以下cmdlet获取共享信息：
+在 powershell 内，我们可以通过执行以下 cmdlet 获取共享信息：
 
 ```powershell
 λ Get-WmiObject -Class Win32_Share
@@ -43,7 +34,7 @@ IPC$                                                                            
 Users                                     C:\Users
 ```
 
-同理，在cmd下，也可以
+同理，在 cmd 下，也可以
 
 ```powershell
 λ net share
@@ -60,10 +51,9 @@ Users        C:\Users
 命令成功完成。
 ```
 
-<a name="gh75ll"></a>
 #### 创建一个共享文件夹
 
-**疯狂的Powershell**
+**疯狂的 Powershell**
 
 ```powershell
 # 共享名
@@ -82,7 +72,7 @@ else
 }
 ```
 
-如果如果您有远程机器的管理员权限的话，也利用WMI在远程的机器上创建新的共享文件夹，下面是在远程主机上创建共享文件夹的代码：
+如果如果您有远程机器的管理员权限的话，也利用 WMI 在远程的机器上创建新的共享文件夹，下面是在远程主机上创建共享文件夹的代码：
 
 ```powershell
 # 共享名
@@ -103,21 +93,20 @@ else
 }
 ```
 
-**低调的cmd**
+**低调的 cmd**
 
 ```bash
 ::建议先查看当前的共享文件夹再进行创建操作
 net share TestShare=D:\SHARE /users:25 /remark:"test share of the a folder"
 ```
 
-我们很轻易地就能将一个文件夹的共享状态开启，我们可以通过UNC路径对其进行访问。创建完文件共享之后，我们来看看怎么使用吧。
+我们很轻易地就能将一个文件夹的共享状态开启，我们可以通过 UNC 路径对其进行访问。创建完文件共享之后，我们来看看怎么使用吧。
 
-<a name="i2dbgm"></a>
 #### 驱动器映射和共享访问
 
 接下来，我们摒弃图形化界面的操作（如果你非喜欢那么做的话，可以通过网上邻居【“网络”】进行查看，或者在计算机图标下右键选择映射网络驱动器），我们来通过命令去启用吧。
 
-**强悍的Powershell**
+**强悍的 Powershell**
 
 临时创建一个网络驱动器映射：
 
@@ -134,7 +123,7 @@ net share TestShare=D:\SHARE /users:25 /remark:"test share of the a folder"
 New-PSDrive -Name Z -PSProvider FileSystem -Root \\TEST-PC\USERS -Persist -Scope Global
 ```
 
-**小巧的cmd**
+**小巧的 cmd**
 
 ```bash
 ::下面这条命令虽然可以在cmd使用此磁盘映射，但是不可利用资源管理器加载。
@@ -146,7 +135,6 @@ subst Z: $env:systemroot
 
 完成如上的工作之后，不出意外，你的资源管理器会出现你想要访问的网络路径的图标。
 
-<a name="ls7bwy"></a>
 #### 删除共享
 
 如果不需要再使用此共享文件夹了，可以卸载掉网络驱动器，并在共享的主机上删除该共享。
@@ -167,15 +155,12 @@ Foreach ($Share in $Shares) {
 net share TestShare /delete
 ```
 
-<a name="z5amwe"></a>
 ### 小结
 
 1. 建立共享文件夹需要事先在启用网络共享和发现。
 
 2. 需要提前做好文件夹权限控制以及共享的权限控制。
 
-3. 通过配置cmdkey可以免去身份认证 `cmdkey /add:targetname /user:username /pass:password`
+3. 通过配置 cmdkey 可以免去身份认证 `cmdkey /add:targetname /user:username /pass:password`
 
-
-Powershell管理共享的相关链接：[https://msdn.microsoft.com/en-us/library/aa394435(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/aa394435(v=vs.85).aspx)
-
+Powershell 管理共享的相关链接：[https://msdn.microsoft.com/en-us/library/aa394435(v=vs.85).aspx](<https://msdn.microsoft.com/en-us/library/aa394435(v=vs.85).aspx>)
