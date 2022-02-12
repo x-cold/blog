@@ -12,6 +12,8 @@ categories: []
 
 > Node.js 提供了 child_process 模块，在 master 进程通过 fork / spawn 等方法调用可以创建 worker 进程并获取其对象（简称 cp）。父子进程会建立 IPC 通道，在 master 进程中可以使用 cp.send() 给 worker 进程发送 IPC 消息，而在 worker 进程中也可以通过 process.send() 给父进程发送 IPC 消息，达到双工通信的目的。（进程管理涉及更复杂的工作，本文暂不涉及）
 
+<!-- more -->
+
 ## 最小实现
 
 基于以上前提，借助 IPC 通道和进程对象，我们可以通过事件驱动的方式实现进程间的通信，只需要简单的几行代码，就能实现基本调用逻辑，例如：
