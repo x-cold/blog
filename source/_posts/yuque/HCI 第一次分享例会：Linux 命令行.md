@@ -1,5 +1,5 @@
 ---
-title: 'HCI第一次分享例会[命令行]'
+title: HCI 第一次分享例会：Linux 命令行
 urlname: chomfq
 date: '2015-10-25 00:00:00 +0800'
 tags:
@@ -20,7 +20,7 @@ categories: []
 
 应用场景：
 
-![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282614096-ab87ccb8-d840-4f46-8e0b-d854f6f28999.png#width=442)
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282614096-ab87ccb8-d840-4f46-8e0b-d854f6f28999.png#averageHue=%23faf8f7&height=693&id=swVD8&originHeight=693&originWidth=442&originalType=binary∶=1&rotation=0&showTitle=false&status=done&style=none&title=&width=442)
 
 ### 言归正传，下面开始进入正题。开始讲解 linux(局部 windows 的命令行)
 
@@ -43,8 +43,8 @@ categories: []
 查看文件权限：ls -l
 ```
 
-![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282638549-5e6ff30a-676f-4162-a8af-fb1b07a735cc.png#width=747)
-![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282646577-acd64bd4-6eaa-41dc-a9e4-5c4627293458.png#width=528)
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282638549-5e6ff30a-676f-4162-a8af-fb1b07a735cc.png#averageHue=%23f4f3f2&height=141&id=C6NPM&originHeight=164&originWidth=871&originalType=binary∶=1&rotation=0&showTitle=false&status=done&style=none&title=&width=747)
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282646577-acd64bd4-6eaa-41dc-a9e4-5c4627293458.png#averageHue=%23f8f8f7&height=363&id=jxNVo&originHeight=363&originWidth=528&originalType=binary∶=1&rotation=0&showTitle=false&status=done&style=none&title=&width=528)
 
 ```bash
 更改所有者：chown
@@ -53,7 +53,7 @@ chmod go-rw hci
 # 'g''o'还有'u'，分别表示group，others，user，'+'，'-' 就分别表示增加和去掉相应的权限
 ```
 
-![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282661213-c3bd0152-16ce-4546-9a6c-4a0b1cb83833.png#width=747)
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282661213-c3bd0152-16ce-4546-9a6c-4a0b1cb83833.png#averageHue=%23f3f3f3&height=245&id=wVePB&originHeight=431&originWidth=1315&originalType=binary∶=1&rotation=0&showTitle=false&status=done&style=none&title=&width=747)
 
 [ps: 三组权限：拥有者、所属用户组、其他用户]
 
@@ -76,7 +76,6 @@ chmod go-rw hci
 
 - 文本处理
   主要工具 vi\vim：屏幕编辑和行编辑模式
-
 - 环境变量
   运行环境的变量。
 

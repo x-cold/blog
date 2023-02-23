@@ -1,5 +1,5 @@
 ---
-title: powershell测试服务器请求时间
+title: '[PowerShell] 测试服务器请求时间'
 urlname: yxbpzt
 date: '2015-02-12 00:00:00 +0800'
 tags:
@@ -46,7 +46,5 @@ Write-Host "It took $milliseconds ms!"
 PowerShell 获取网页信息个人建议的三种解决方案：
 
 - WebClient
-
 - Invoke-WebRequest
-
 - COM 组件"InternetExplorer.Application"

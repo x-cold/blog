@@ -1,5 +1,5 @@
 ---
-title: JavaScript的一些定位属性
+title: JavaScript 定位属性介绍
 urlname: mdfepb
 date: '2015-01-20 00:00:00 +0800'
 tags:

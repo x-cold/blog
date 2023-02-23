@@ -1,5 +1,5 @@
 ---
-title: powershell学习之道-文件夹共享及磁盘映射
+title: '[PowerShell] 文件夹共享及磁盘映射'
 urlname: qeqnq1
 date: '2015-01-19 00:00:00 +0800'
 tags:
@@ -158,9 +158,7 @@ net share TestShare /delete
 ### 小结
 
 1. 建立共享文件夹需要事先在启用网络共享和发现。
-
 2. 需要提前做好文件夹权限控制以及共享的权限控制。
-
 3. 通过配置 cmdkey 可以免去身份认证 `cmdkey /add:targetname /user:username /pass:password`
 
 Powershell 管理共享的相关链接：[https://msdn.microsoft.com/en-us/library/aa394435(v=vs.85).aspx](<https://msdn.microsoft.com/en-us/library/aa394435(v=vs.85).aspx>)

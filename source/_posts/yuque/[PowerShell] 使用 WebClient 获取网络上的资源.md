@@ -1,5 +1,5 @@
 ---
-title: WebClient获取网络上的资源
+title: '[PowerShell] 使用 WebClient 获取网络上的资源'
 urlname: ynbfpq
 date: '2015-02-15 00:00:00 +0800'
 tags:

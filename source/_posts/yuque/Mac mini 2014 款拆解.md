@@ -1,8 +1,9 @@
 ---
 title: Mac mini 2014 款拆解
 urlname: fxz0qy
-date: '2019-03-28 10:00:41 +0800'
-tags: []
+date: '2018-08-22 00:00:00 +0800'
+tags:
+  - 计算机维护
 categories: []
 ---
 
@@ -23,7 +24,7 @@ categories: []
 | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | 传输速率                                                                               | 500MB/s (Samsang 860 EVO 500G 为例，下同)                                                                                | 读取 3000MB/s, 写入 2300MB/s (Sumang 970 Plus EVO  250G 为例，下同)                                                |
 | 价格                                                                                   | ￥ 529 / 500G                                                                                                            | ￥ 499 / 250G                                                                                                      |
-| 额外设备                                                                               | 无                                                                                                                       | [NVMe PCIe x4 M.2 NGFF 转 late 2014 苹果 Mac mini A1347 SSD 转接卡]()                                              |
+| 额外设备                                                                               | 无                                                                                                                       | NVMe PCIe x4 M.2 NGFF 转 late 2014 苹果 Mac mini A1347 SSD 转接卡                                                  |
 | 拆装难度                                                                               | 需要拆解整机，替换原有 HDD                                                                                               | 只需要拆开底壳，主板表面即可安装                                                                                   |
 | 总结                                                                                   | 总体上来看，升级 SATA SSD 的性价比要优于 PCIe SSD，但是需要拆解整机，需要一定的动手能力。另外原有的 HDD 也无法同时使用。 | PCIe SSD 的优势很明显，传输速率明显比传统的 SATA SSD 更快一些，另外还能跟原有的 HDD 共存，可以保持更大的存储空间。 |
 | 但是受限于主板接口的传输速率的限制，PCIe SSD 应有的传输速率会大打折扣 (读写 700MB/s)。 |
@@ -47,17 +48,17 @@ Mac mini 的组装相对普通的主机更为精细，使用的螺丝都是非�
 
 使用稍微坚硬点的卡片，撬开黑色底壳；
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552791318220-de5c1020-3c64-441d-aff9-4a6ef44bedf6.png#align=left&display=inline&height=444&name=image.png&originHeight=444&originWidth=592&size=216358&status=done&width=592)
+![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552791318220-de5c1020-3c64-441d-aff9-4a6ef44bedf6.png#averageHue=%238f918c&height=444&id=nZcLo&name=image.png&originHeight=444&originWidth=592&originalType=binary∶=1&rotation=0&showTitle=false&size=216358&status=done&style=none&title=&width=592)
 
 拧下电磁屏蔽层的六枚螺丝，翘起一半**（注意不要直接打开）**，然后从主板卸下 Wifi 的连接线，取下电磁屏蔽层。
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552791717666-0b64066c-ce50-4651-ab07-6bca12ed51df.png#align=left&display=inline&height=444&name=image.png&originHeight=444&originWidth=592&size=254350&status=done&width=592)
+![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552791717666-0b64066c-ce50-4651-ab07-6bca12ed51df.png#averageHue=%23b5b2ab&height=444&id=q4kHh&name=image.png&originHeight=444&originWidth=592&originalType=binary∶=1&rotation=0&showTitle=false&size=254350&status=done&style=none&title=&width=592)
 
 ### 分割线
 
 如果是加装 PCIe SSD，往下的步骤就不需要再进行下去了，只需要把 SSD 装进去转接卡上，然后将转接卡安装到主板表面即可。
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552792965448-06555547-bce5-4847-a131-91421dd6cd59.png#align=left&display=inline&height=1024&name=image.png&originHeight=1024&originWidth=1366&size=1480881&status=done&width=1366)
+![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552792965448-06555547-bce5-4847-a131-91421dd6cd59.png#averageHue=%2348443e&height=1024&id=DQ5x1&name=image.png&originHeight=1024&originWidth=1366&originalType=binary∶=1&rotation=0&showTitle=false&size=1480881&status=done&style=none&title=&width=1366)
 
 ### 卸载风扇
 
@@ -65,35 +66,35 @@ Mac mini 的组装相对普通的主机更为精细，使用的螺丝都是非�
 
 拧开固定风扇的螺丝，卸下风扇的接线（在 Wifi 接线的旁边），取出风扇。
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552791918748-295fd5ba-f018-49f2-baf0-89c577e85f10.png#align=left&display=inline&height=444&name=image.png&originHeight=444&originWidth=592&size=296012&status=done&width=592)
+![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552791918748-295fd5ba-f018-49f2-baf0-89c577e85f10.png#height=444&id=sDhSh&name=image.png&originHeight=444&originWidth=592&originalType=binary∶=1&rotation=0&showTitle=false&size=296012&status=done&style=none&title=&width=592)
 
 ### 取下主板
 
 主板的拆解即是细致活，也是体力活。首先把 Mac mini 表面所有的排线和接口全部卸下，然后取出固定的螺丝。
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552792295593-1b7802ba-a1ce-46d6-80cc-0aaf8666a278.png#align=left&display=inline&height=482&name=image.png&originHeight=482&originWidth=638&size=464488&status=done&width=638)
+![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552792295593-1b7802ba-a1ce-46d6-80cc-0aaf8666a278.png#height=482&id=vG02z&name=image.png&originHeight=482&originWidth=638&originalType=binary∶=1&rotation=0&showTitle=false&size=464488&status=done&style=none&title=&width=638)
 
 蓝色区域是电源排线，也需要先推出来
 
 接下来则是体力活了，用两只螺丝刀插入到这两个洞口**（务必插到最底部），然后往外用力推开。**
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552792411854-d3976262-312c-455e-ac38-b4094e37e018.png#align=left&display=inline&height=483&name=image.png&originHeight=483&originWidth=642&size=354782&status=done&width=642)
+![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552792411854-d3976262-312c-455e-ac38-b4094e37e018.png#height=483&id=VePeU&name=image.png&originHeight=483&originWidth=642&originalType=binary∶=1&rotation=0&showTitle=false&size=354782&status=done&style=none&title=&width=642)
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552792502983-a70adf16-3524-4366-bf9f-eb0a7fe55004.png#align=left&display=inline&height=444&name=image.png&originHeight=444&originWidth=592&size=114993&status=done&width=592)
+![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552792502983-a70adf16-3524-4366-bf9f-eb0a7fe55004.png#height=444&id=jpDng&name=image.png&originHeight=444&originWidth=592&originalType=binary∶=1&rotation=0&showTitle=false&size=114993&status=done&style=none&title=&width=592)
 
 ### 抽出电源
 
 抽出电源之前一定要确保蓝色框的电源线接口已经拔出。电源的输入口就是我们插入电源线的接头，稍微拉松一下最下面的金属滑片，旋转接口至 90 度，可以明显感觉到松动感，抽出电源。
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552792715272-71e2e732-b88d-4738-95de-e6ce9348bf96.png#align=left&display=inline&height=444&name=image.png&originHeight=444&originWidth=592&size=114055&status=done&width=592)
+![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552792715272-71e2e732-b88d-4738-95de-e6ce9348bf96.png#height=444&id=X6WCK&name=image.png&originHeight=444&originWidth=592&originalType=binary∶=1&rotation=0&showTitle=false&size=114055&status=done&style=none&title=&width=592)
 
 ### 替换硬盘
 
 最后剩下的硬盘托架非常容易拆卸，往外一拉就出来了
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552793027234-233cf2f3-89f7-44ab-b0ff-d966018d0793.png#align=left&display=inline&height=444&name=image.png&originHeight=444&originWidth=592&size=252148&status=done&width=592)
+![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552793027234-233cf2f3-89f7-44ab-b0ff-d966018d0793.png#height=444&id=ko2jP&name=image.png&originHeight=444&originWidth=592&originalType=binary∶=1&rotation=0&showTitle=false&size=252148&status=done&style=none&title=&width=592)
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552793042179-20a64d5e-5b53-4496-a938-335982c18891.png#align=left&display=inline&height=444&name=image.png&originHeight=444&originWidth=592&size=217700&status=done&width=592)
+![image.png](https://cdn.nlark.com/yuque/0/2019/png/103147/1552793042179-20a64d5e-5b53-4496-a938-335982c18891.png#height=444&id=zwM6X&name=image.png&originHeight=444&originWidth=592&originalType=binary∶=1&rotation=0&showTitle=false&size=217700&status=done&style=none&title=&width=592)
 
 然后替换上新的 SSD 即可（建议使用之前先测试一下 SSD 的可用性）。按照拆机的步骤反向进行即可重新组装好你的 Mac mini。
 

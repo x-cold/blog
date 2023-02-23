@@ -1,5 +1,5 @@
 ---
-title: powershell学习之道-入门须知的八个技巧
+title: '[PowerShell] 入门须知的八个技巧'
 urlname: fbfn65
 date: '2015-01-28 00:00:00 +0800'
 tags:
@@ -10,7 +10,6 @@ categories: []
 ### powershell 脚本入门须知的八个技巧
 
 - 脚本文件后缀名为 ".ps1" 的文本文件，包含了一系列的 powershell 命令，每条命令显示为独立的一行；
-
 - 执行策略：about_Execution_Policies，通过下面这条命令查询所有支持的执行策略：
 
 ```powershell
@@ -18,11 +17,8 @@ categories: []
 ```
 
 - 运行脚本：使用绝对路径和相对路径均可运行，与 shell 命令执行如出一辙；
-
 - 管道（"|"）的作用是将前一条命令的输出作为另一个命令的输入；
-
 - 变量用 "$" 进行引用，用 "@" 将列表内容转为数组，命令引用数组变量 "$name" 也可以直接使用 "@name" ；
-
 - "-split" 和 "-join" 拆分和连接字符串，如下面这条命令可以执行 1-100 求和：
 
 ```powershell

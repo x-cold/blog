@@ -1,5 +1,5 @@
 ---
-title: Javascript ajax获取xml
+title: JavaScript Ajax 获取 xml
 urlname: ki4660
 date: '2015-02-12 00:00:00 +0800'
 tags:
@@ -11,9 +11,7 @@ categories: []
 ### ajax 简介
 
 - AJAX = 异步 JavaScript 和 XML
-
 - AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术
-
 - AJAX 是一种用于创建快速动态网页的技术
 
 <!-- more -->

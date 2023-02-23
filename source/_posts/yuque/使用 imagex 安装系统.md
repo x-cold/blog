@@ -1,5 +1,5 @@
 ---
-title: imagex.exe花式装系统
+title: 使用 imagex 安装系统
 urlname: gud1gc
 date: '2015-01-20 00:00:00 +0800'
 tags:
@@ -133,7 +133,6 @@ Available Image Choices:
 ```
 
 - Image Count 即是该镜像包含的的系统各版本的计数，如旗舰版、专业版等。我们需要在后面的 XML 里面找到自己需要安装的系统版本对应的 Count 记录下来。
-
 - 解压 install.wim 镜像内的系统文件到对应的路径，既是完成安装系统文件的过程。
 
 ```bash
@@ -156,7 +155,5 @@ Available Image Choices:
 ### 小结
 
 1. imagex 工具备份和还原的速度快，体积非常小。
-
 2. imagex 工具在命令行下的语法多样，可以进行各种灵活的操作。
-
 3. 使用此方法非常适合直接在常用的操作系统上安装第二操作系统，并且速度十分可观，配合 VHD 安装多系统更是巧妙。

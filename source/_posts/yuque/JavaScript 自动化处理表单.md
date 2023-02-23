@@ -1,5 +1,5 @@
 ---
-title: js自动化处理表单
+title: JavaScript 自动化处理表单
 urlname: wn7wdo
 date: '2015-01-07 00:00:00 +0800'
 tags:
@@ -51,7 +51,6 @@ btn.click();
 ### 小结
 
 - 需要对 html 有基本的了解，才能快速地通过审查元素找到需要操作的 DOM 对象
-
 - 在一些带有 iframe 框架的网页，可以使用下面这条 js 语句获取 iframe
 
 ```javascript

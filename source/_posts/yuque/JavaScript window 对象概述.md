@@ -1,5 +1,5 @@
 ---
-title: Javascript之window对象
+title: JavaScript window 对象概述
 urlname: gh8736
 date: '2015-03-01 00:00:00 +0800'
 tags:
@@ -35,7 +35,7 @@ self.self === self;
 
 ### 子对象(下面对于子对象函数的描述均省略显示使用 window 对象)
 
-![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282924354-52404bad-0b55-42bf-b181-09641b534884.png#width=525)
+![](https://cdn.yuque.com/yuque/0/2018/png/103147/1530282924354-52404bad-0b55-42bf-b181-09641b534884.png#averageHue=%23fdfcfc&height=501&id=DrJZX&originHeight=501&originWidth=525&originalType=binary∶=1&rotation=0&showTitle=false&status=done&style=none&title=&width=525)
 
 1、window.frames[]
 如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象。通过 frames[name][或frames.name](http://xn--frames-o06l.name)（name为框架的name）获取框架的window对象。
@@ -158,7 +158,6 @@ go() | 加载 history 列表中某个一个 URL
 
 - moveBy()
   可相对窗口的当前坐标把它移动指定的像素。
-
 - moveTo()
   把窗口的左上角移动到一个指定的坐标。
 
@@ -172,7 +171,6 @@ window.moveTo(x, y);
 
 - resizeBy()
   按照指定的像素调整窗口的大小。
-
 - resizeTo()
   把窗口的大小调整到指定的宽度和高度。
 
@@ -187,7 +185,6 @@ resizeTo(width, height);
 
 - scrollTo()
   按照指定的像素值来滚动内容。
-
 - scrollBy()
   把内容滚动到指定的坐标。
 
@@ -203,7 +200,6 @@ _腾讯的在线笔试似乎就是用这个防止作弊的(切换窗口)_
 
 - focus()
   将键盘焦点赋予某一窗口。
-
 - blur()
   把键盘焦点从顶层窗口移开。
 
@@ -211,7 +207,6 @@ _腾讯的在线笔试似乎就是用这个防止作弊的(切换窗口)_
 
 - open()
   open() 方法用于打开一个新的浏览器窗口或查找一个已命名的窗口。[参考文档](http://www.w3school.com.cn/jsref/met_win_open.asp)
-
 - close()
   close() 方法用于关闭浏览器窗口。
 
@@ -231,10 +226,8 @@ testWin.close;
 
 - alert()
   显示带有一段消息和确认按钮的警告框。
-
 - confirm()
   显示带有一段消息以及确认按钮和取消按钮的对话框。返回值为（确认按钮 ？ true : false）
-
 - prompt()
   显示带有一段消息以及输入框、确认按钮和取消按钮的对话框。
   _返回值为：输入的字符串或者 null（取消按钮）_
@@ -255,7 +248,6 @@ string !== null ? console.log('学号是' + string) : console.log('您点击了�
 
 - setTimeout()/clearTimeout()
   按照指定的周期（以毫秒计）来调用函数或计算表达式 / 取消前者设定的计时器
-
 - setInterval/clearInterval()
   在指定的毫秒数后调用函数或计算表达式 / 取消前者设定的计时器
 
@@ -265,7 +257,6 @@ string !== null ? console.log('学号是' + string) : console.log('您点击了�
 
 - window.defaultStatus
   设置或返回窗口状态栏中的默认文本。
-
 - window.status
   设置窗口状态栏的文本。
 
@@ -273,13 +264,10 @@ string !== null ? console.log('学号是' + string) : console.log('您点击了�
 
 - innerHeight
   页面可视化区域的高度（包含滚动条）
-
 - innerWidth
   页面可视化区域的宽度（包含滚动条）
-
 - outerHeight
   窗口可视化区域的高度（包含页面可视化区域和浏览器状态栏、工具栏等，即屏幕高度减去任务栏的高度）
-
 - outerWidth
   窗口可视化区域的宽度（解释同上）
 
@@ -287,10 +275,8 @@ string !== null ? console.log('学号是' + string) : console.log('您点击了�
 
 - pageXOffset
   设置或返回当前页面相对于窗口显示区左上角的 X 位置。
-
 - pageYOffset
   设置或返回当前页面相对于窗口显示区左上角的 Y 位置。
-
 - screenLeft / screenTop / screenX / screenY
 
 _只读整数。声明了窗口的左上角在屏幕上的的 x 坐标和 y 坐标。IE、Safari 和 Opera 支持 screenLeft 和 screenTop，而 Firefox 和 Safari 支持 screenX 和 screenY_
@@ -302,13 +288,10 @@ _只读整数。声明了窗口的左上角在屏幕上的的 x 坐标和 y 坐�
 
 - name
   设置或返回窗口的名称。
-
 - parent
   返回父窗口。
-
 - top
   返回顶层的先辈窗口。
-
 - closed
   返回一个窗口是否关闭。
 
